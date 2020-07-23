@@ -16,3 +16,43 @@
   margin-bottom: 4%;
   margin-top: 20%;
 }
+
+.header {
+  font-size: 1rem;
+}
+
+.signUp {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
+    height: 990px;
+    background-size: cover;
+    padding-left: 34%;
+    padding-top: 13%;
+}
+
+.signIn {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
+  height: 990px;
+  background-size: cover;
+  padding-left: 34%;
+  padding-top: 14%;
+}
+
+.instructions {
+   color: white;
+    font-size: 1.5rem;
+}
+
+.field {
+  margin-left: 24%;
+}
+
+.cards {
+  margin: 8% 2%;
+}
+
+.mainMenu {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg) no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+

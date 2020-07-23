@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 
 const Footer = () => {
     return (
-    <div>
-      <div className='ui three item ui inverted segment ui large menu'>
+    <div className='footer'>
+      <div className='ui three item ui inverted segment ui mini menu'>
           <Link to ='/' className='blue button item'>
             Home
           </Link>
