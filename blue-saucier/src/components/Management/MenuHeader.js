@@ -2,7 +2,7 @@ import React from 'react';
 import fire from '../../config/firebase';
 
 class MenuHeader extends React.Component {
-  state = {date: '', time:''}
+  state = {date: '', time:'', userName: {} }
 
   componentDidMount(){
     setInterval(() => {
@@ -12,20 +12,31 @@ class MenuHeader extends React.Component {
     setInterval(() => {
       this.setState({ time: new Date().toLocaleTimeString() });
     }, 1000)
+
+    this.authListener();
   }
 
-  logout=() => {
+  authListener() {
+    fire.auth().onAuthStateChanged(userName => {
+      if (userName) { this.setState({ userName }) }
+    });
+  }
+  
+
+  logout = () => {
     fire.auth().signOut(); 
   }
 
   render(){
     return (
-      <div>
+       <div>
         <div className='ui inverted segment'>
-          <div className='ui button' onClick={this.logout}>Log Out</div>
-          <h2>Hi, {this.props.name}</h2>
-          <h3>{this.state.date}</h3>
-          <h3>{this.state.time}</h3>
+          <div className='ui button' onClick={this.logout} style={{position: 'absolute', marginLeft: '91%'}}>Log Out</div>
+          <div className='welcomeDisplay'>
+          <h1>Hello, {this.state.userName.displayName}</h1>
+          <h3>Today's date: &ensp;{this.state.date}</h3>
+          <h3>Current time: &ensp;{this.state.time}</h3>
+          </div>
         </div>
       </div>
       )

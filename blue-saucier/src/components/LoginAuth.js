@@ -1,7 +1,7 @@
 import React from "react";
 import fire from "../config/firebase";
 
-import Login from "./LogIn";
+import Login from './LogIn';
 import ManagementMenu from './Management/ManagementMenu';
 
 class LoginAuth extends React.Component {
@@ -16,7 +16,6 @@ class LoginAuth extends React.Component {
 
   authListener() {
     fire.auth().onAuthStateChanged(user => {
-      console.log(user.displayName)
       if (user) {
         this.setState({ user });
       } else {
@@ -25,7 +24,7 @@ class LoginAuth extends React.Component {
     });
   }
   render() {
-    return <div>{this.state.user ? < ManagementMenu name={this.state.user.displayName}/> : <Login />}</div>;
+    return <div>{this.state.user ? < ManagementMenu/> : <Login/>}</div>;
   }
 }
 

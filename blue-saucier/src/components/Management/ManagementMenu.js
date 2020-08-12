@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import MenuHeader from './MenuHeader';
 
-const ManagementMenu = ({name}) => {
+const ManagementMenu = () => {
   return (
     <div className='mainMenu'>
-      <MenuHeader name={name}/>
-      <div className="ui four cards" style={{margin:'7% 2%'}}>
-      <Link to="/" className="card">
+      <MenuHeader/>
+      <div className="ui four cards ui container" style={{marginTop: '4%'}}>
+      <Link to="/list-menu" className="card">
         <div className="image">
           <img
             src="https://images.unsplash.com/photo-1568847811512-803314424fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
@@ -17,7 +17,7 @@ const ManagementMenu = ({name}) => {
           <h2> Ordering List</h2>
         </div>
       </Link>
-      <Link to="/" className="card">
+      <Link to="" className="card">
         <div className="image">
           <img
             src="https://images.unsplash.com/photo-1568031818486-50dc2230ba10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"

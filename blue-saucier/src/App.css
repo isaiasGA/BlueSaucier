@@ -51,8 +51,53 @@
 }
 
 .mainMenu {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg);
   height: 899px;
   background-size: cover;
 }
+
+.createList {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
+  height: 899px;
+  background-size: cover;
+}
+
+
+.listMenu {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+.view-list {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/viewList2.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.editList{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/editList.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+}
+
+
+.ordering-title{
+  color: white;
+  text-align: center;
+}
+
+.welcomeDisplay{
+  text-align: center;
+}
+
+.logOut{
+    position: absolute;
+    margin-left: 91%;
+}
+
 
