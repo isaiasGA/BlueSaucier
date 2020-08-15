@@ -25,23 +25,25 @@ class SignIn extends React.Component {
 
   render() {
     return(
-      <div>
-       <form onSubmit={this.handleSubmit} className="signIn ui form">
-         <div className='signContent'>
-          <h2 className='instructions'>Log In</h2>
-          <div className="field three wide field">
-            <label style={{color: 'white'}}>E-mail</label>
-            <input value={this.state.email} onChange={this.handleChanges} type="email" name='email' placeholder="Email" autoComplete='off'/>
-          </div>
-          <div className="field three wide field">
-            <label style={{color: 'white'}}>Password</label>
-            <input value={this.state.password} onChange={this.handleChanges} type="password" name='password' autoComplete='off'/>
-          </div>
-          <button className="ui button" type="submit">Submit</button>
-         </div>
-        </form>
+      <>
+        <div className='signIn'>
+          <form onSubmit={this.handleSubmit} className=" loginForm ui form">
+            <div className='signContent'>
+              <h2 className='instructions'>Log In</h2>
+              <div className="field four wide field">
+                <label style={{color: 'white'}}>E-mail</label>
+                <input value={this.state.email} onChange={this.handleChanges} type="email" name='email' placeholder="Email" autoComplete='off'/>
+              </div>
+              <div className="field four wide field">
+                <label style={{color: 'white'}}>Password</label>
+                <input value={this.state.password} onChange={this.handleChanges} type="password" name='password' autoComplete='off'/>
+              </div>
+              <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>
+            </div>
+          </form>
+        </div>  
         <Footer />
-      </div>  
+      </>
     )
   }
 }

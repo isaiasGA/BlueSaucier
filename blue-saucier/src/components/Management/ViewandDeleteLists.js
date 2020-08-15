@@ -3,13 +3,45 @@ import fire from '../../config/firebase';
 import {Link} from 'react-router-dom';
 
 class ViewLists extends React.Component {
+  state = { 
+    uid: '',
+    listData: []
+  }
+  componentDidMount() {
+    this.getListData();
+    this.getUserId();
+  } 
+
+  componentWillUnmount(){
+    this.unsubscribe()
+  }
+
+  getListData(){
+    const dataBase = fire.firestore();
+    
+     this.unsubscribe = dataBase.collection('restaurantList').onSnapshot(snap => {
+      const listData = [];
+       snap.forEach(list => listData.push(({...list.data(), listId: list.id })))
+       this.setState({listData: listData})
+      })
+}
+
+getUserId() {
+  fire.auth().onAuthStateChanged(user => {
+    if (user) {
+       this.setState({ uid: user.uid })
+    } else {
+      this.setState({ uid: null });
+    }
+  });
+}
 
   render() {
-    const {listData} = this.props;
-    const item = listData.map(listObject => {
-        if(listObject.uid === this.props.uid){
+
+    const item = this.state.listData.map(listObject => {
+        if(listObject.uid === this.state.uid){
          return (
-          <div className='ui centered blue card'>
+          <div className='ui centered blue card' key={listObject.listId}>
             <div className='content'>
               <p><strong>Item:</strong> &nbsp; {listObject.item}</p>
               <p><strong>Category:</strong> &nbsp; {listObject.category}</p>
@@ -22,6 +54,7 @@ class ViewLists extends React.Component {
           </div>
           )
         }
+        else {return null}
     })
     
     return (
@@ -29,11 +62,10 @@ class ViewLists extends React.Component {
         <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
           <Link to ='/main-menu' className='active item'>Main Menu</Link>
           <Link to ='/create-lists' className='item'>Create List</Link>
-
         </div>
         <h2 className='ordering-title'>My Ordering Lists</h2>
-\          {item}
-\     </div>
+          {item}
+     </div>
      
     );
   }

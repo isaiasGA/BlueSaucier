@@ -1,13 +1,13 @@
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
   filter: grayscale(100%);
-  height: 990px;
+  height: 899px;
   background-size: cover;
 }
 
 .home-content {
-    padding: 18% 0;
-    margin-left: 42%;
+    padding-top: 30%;
+    margin-left: 42%; 
 }
 
 .home-title {
@@ -38,7 +38,8 @@
 }
 
 .instructions {
-   color: white;
+    margin-left: 9%;
+    color: white;
     font-size: 1.5rem;
 }
 
@@ -98,6 +99,16 @@
 .logOut{
     position: absolute;
     margin-left: 91%;
+}
+
+.loginForm {
+    width: 100%;
+    margin-left: 18%;
+}
+
+.formContent {
+    margin-left: 17%;
+    width: 100%;
 }
 
 

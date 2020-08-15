@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import fire from './config/firebase';
 
 import Home from './components/Home';
 import SignUp from './components/SignUp';
@@ -14,40 +13,6 @@ import ViewLists from './components/Management/ViewandDeleteLists';
 import EditList from './components/Management/EditLists';
 
 class App extends React.Component {
-  state = { 
-    uid: '',
-    editId: '',
-    listData: []
-  }
-
-  componentDidMount() {
-    this.getListData();
-    this.getUserId();
-  }
-
-  componentWillUnmount(){
-    this.unsubscribe()
-  }
-
-  getListData(){
-      const dataBase = fire.firestore();
-       this.unsubscribe = dataBase.collection('restaurantList').onSnapshot(snap => {
-        const listData = [];
-         snap.forEach(list => listData.push(({...list.data(), listId: list.id })))
-         this.setState({listData: listData})
-        })
-  }
-
-  getUserId() {
-    fire.auth().onAuthStateChanged(user => {
-      if (user) {
-         this.setState({ uid: user.uid })
-      } else {
-        this.setState({ uid: null });
-      }
-    });
-  }
-
  
   render(){
     return (
@@ -55,9 +20,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route path='/view-lists'> 
-                <ViewLists uid={this.state.uid} listData={this.state.listData}/> 
-              </Route> 
+              <Route path='/view-lists' component={ViewLists}/> 
               <Route path='/edit-list/:listId' component={EditList}/>
               <Route path='/create-lists' component={CreateLists}/>
               <Route path='/list-menu'component={ListMenu} />

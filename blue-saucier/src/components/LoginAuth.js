@@ -5,6 +5,7 @@ import Login from './LogIn';
 import ManagementMenu from './Management/ManagementMenu';
 
 class LoginAuth extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = { user: {} };
@@ -14,8 +15,13 @@ class LoginAuth extends React.Component {
     this.authListener();
   }
 
+  componentWillUnmount(){
+    this.authUser();
+  }
+
+
   authListener() {
-    fire.auth().onAuthStateChanged(user => {
+    this.authUser = fire.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({ user });
       } else {

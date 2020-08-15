@@ -17,8 +17,12 @@ class CreateLists extends React.Component {
     this.getUserId();
   }
 
+  componentWillUnmount(){
+    this.userId();
+  }
+
   getUserId() {
-    fire.auth().onAuthStateChanged(user => {
+    this.userId = fire.auth().onAuthStateChanged(user => {
       if (user) {
          this.setState({ uid: user.uid, user: user.displayName})
       } else {
@@ -62,7 +66,7 @@ class CreateLists extends React.Component {
               <label style={{color: 'white'}}>Item</label>
               <input value={this.state.item} onChange={this.handleChanges} type="text" name='item' placeholder="Item" autoComplete='off'/>
             </div>
-            <div className=" one wide field">
+            <div className="two wide field">
               <label style={{color: 'white'}}>Quantity</label>
               <select onChange={this.handleChanges} className='ui fluid dropdown' name='quantity'>
                 <option value=''>Qty</option>
@@ -83,12 +87,11 @@ class CreateLists extends React.Component {
           <div className="two fields">
             <div className='two wide field'>
               <label style={{color: 'white'}}>Unit Price</label>
-              <td></td>
               <input value={this.state.unitPrice} onChange={this.handleChanges} type="text" name='unitPrice' placeholder="$" autoComplete='off' data-type='currency'/>
             </div>
             <div className='two wide field'>
               <label style={{color: 'white'}}>Total</label>
-              <input value={this.state.total} onChange={this.handleChanges} type="number" name='total' placeholder="$" autoComplete='off'/>
+              <input value={this.state.total} onChange={this.handleChanges} type="text" name='total' placeholder="$" autoComplete='off'/>
             </div>
           </div>
 
@@ -109,7 +112,7 @@ class CreateLists extends React.Component {
                 <option value='other'>Other</option>
               </select>
           </div>
-          <button className="ui button" type="submit">Submit</button>
+          <button className="ui button" type="submit" style={{marginLeft:'6%'}}>Submit</button>
         </form>
       </div>
       </div>
