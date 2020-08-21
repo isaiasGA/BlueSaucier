@@ -9,7 +9,7 @@ import LogIn from './components/LogIn';
 import ManagementMenu from './components/Management/ManagementMenu';
 import ListMenu from './components/Management/ListMenu';
 import CreateLists from './components/Management/CreateLists';
-import ViewLists from './components/Management/ViewandDeleteLists';
+import ViewLists from './components/Management/ViewLists';
 import EditList from './components/Management/EditLists';
 
 class App extends React.Component {

@@ -1,20 +1,31 @@
 import React from 'react';
+import fire from '../config/firebase';
 
-import Footer from './Footer'
+import Footer from './Footer';
 
 class SignUp extends React.Component {
+
     state = {
       firstName: '',
       lastName: '',
       email: '',
-      password: ''
+      password: '',
     }
 
       handleSubmit = event => {
-        
+        event.preventDefault();
+          fire
+          .auth()
+          .createUserWithEmailAndPassword(this.state.email, this.state.password)
+          .catch(error => {
+            console.log('error',error);
+          });
       }
     
-        
+      handleChanges= event => {
+        this.setState({[event.target.name]: event.target.value});
+
+      }
     
    
   render() {
@@ -37,7 +48,7 @@ class SignUp extends React.Component {
           </div>
           <div className="field four wide field">
             <label style={{color: 'white'}}>Password</label>
-            <input value={this.state.password} onChange={this.handleChanges} type="password" name='password' autoComplete='off'/>
+            <input value={this.state.password} onChange={this.handleChanges} type="password" name='password' placeholder='Password' autoComplete='off'/>
           </div>
           <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>
          </div>
@@ -47,6 +58,7 @@ class SignUp extends React.Component {
     )
   }
 }
+
 
 
 

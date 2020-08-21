@@ -4,9 +4,12 @@ import fire from '../config/firebase';
 import Footer from './Footer'
 
 class SignIn extends React.Component {
+
+
     state = {
       email: '',
       password: '',
+      errorPass: ''
     }
 
     handleSubmit = event => {
@@ -15,8 +18,8 @@ class SignIn extends React.Component {
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .catch(error => {
-        console.log(error);
-      });
+        this.setState({ errorPass: error.code})
+       })
     }
 
   handleChanges= event => {
