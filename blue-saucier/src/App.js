@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Home from './components/Home';
 import SignUp from './components/SignUp';
-import LoginAuth from './components/LoginAuth';
 import LogIn from './components/LogIn';
 import ManagementMenu from './components/Management/ManagementMenu';
 import ListMenu from './components/Management/ListMenu';
@@ -26,8 +25,7 @@ class App extends React.Component {
               <Route path='/list-menu'component={ListMenu} />
               <Route path='/main-menu'component={ManagementMenu} />
               <Route path='/sign-up' component={SignUp}/>
-              <Route path='/log-in' component={LogIn}/>
-              <Route path='/login-auth' component={LoginAuth}/>
+              <Route path='/log-in' component={LogIn}/> 
               <Route exact path='/' component={Home}/>
             </Switch>
           </div>

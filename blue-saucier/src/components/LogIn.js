@@ -14,11 +14,12 @@ class SignIn extends React.Component {
 
     handleSubmit = event => {
       event.preventDefault();
+  
       fire
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then(() => this.props.history.push('/main-menu'))
       .catch(error => {
-        console.log(error)
         if(error.code === 'auth/user-not-found'){
           this.setState( {errorCode: 'User not found' })  
           } else if (error.code === 'auth/wrong-password'){
