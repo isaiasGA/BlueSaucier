@@ -19,10 +19,10 @@ const initialState = {
 }
 
 class SignUp extends React.Component {
-
     state = initialState;
 
     validate = () => {
+
      let firstNameError = '';
      let lastNameError = '';
      let emailError = '';
