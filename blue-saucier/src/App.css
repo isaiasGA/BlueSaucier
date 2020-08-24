@@ -1,3 +1,7 @@
+
+h2{
+  text-align-last: center;
+}
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
   filter: grayscale(100%);
@@ -116,5 +120,11 @@
   color: red;
   font-size: 0.75em;
   display: relative;
+}
+
+.menuPlanning {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/menu.jpg) no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
 }
 

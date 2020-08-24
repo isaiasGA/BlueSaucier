@@ -1,7 +1,7 @@
 import React from 'react';
-import fire from '../config/firebase';
+import fire from '../../config/firebase';
 
-import SuccessModal from './Management/SuccessModal';
+import SuccessModal from './SuccessModal';
 import Footer from './Footer';
 
 const initialState = {

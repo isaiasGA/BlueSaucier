@@ -1,5 +1,5 @@
 import React from 'react';
-import fire from '../config/firebase';
+import fire from '../../config/firebase';
 
 import Footer from './Footer'
 
@@ -41,7 +41,7 @@ class SignIn extends React.Component {
         <div className='signIn'>
           <form onSubmit={this.handleSubmit} className=" loginForm ui form error">
             <div className='signContent'>
-              <h2 className='instructions'>Log In</h2>
+              <h3 className='instructions'>Log In</h3>
 
               <div className="ui error message" style={{width:'25%', display:`${this.state.display}`}}>
                 <div className='header'>{this.state.errorCode }</div>
