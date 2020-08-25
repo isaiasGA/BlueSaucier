@@ -123,8 +123,26 @@ h2{
 }
 
 .menuPlanning {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/menu.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/Menu.jpg) no-repeat center center fixed;
   height: 899px;
   background-size: cover;
+}
+
+
+.menuBackground{
+  background: url(./images/menuBackground.jpg) no-repeat center center fixed;
+  height: auto;
+  padding-left: 22%;
+  border-radius: 3%;
+}
+
+
+.createMenu{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/CreateMenu.jpg) no-repeat center center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
