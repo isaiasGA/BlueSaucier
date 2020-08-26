@@ -13,7 +13,12 @@ class CreateMenu extends React.Component {
       user: '',
       uid: '',
   
-      dishValues: [{category: {appetizer: 'appetizer', breakfast: 'breakfast', lunch: 'lunch', mains: 'mains', drinks: 'drinks', desserts: 'dessert'}, dish: '', description: '', price: ''}]
+      dishValues: [{
+        category: '',
+        dish: '', 
+        description: '', 
+        price: ''
+      }]
     }
   }
  
@@ -42,13 +47,13 @@ class CreateMenu extends React.Component {
         <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
           <label>Category</label>
           <select onChange={this.handleChangesNewDish.bind(this, i)} className='ui fluid dropdown' name='category'>
-            <option value=''>Cat</option>
-            <option value={elem.category.appetizer}>Appetizers</option>
-            <option value={elem.category.breakfast}>Breakfast</option>
-            <option value={elem.category.lunch}>Lunch</option>
-            <option value={elem.category.mains}>Mains</option>
-            <option value={elem.category.drinks}>Drinks</option>
-            <option value={elem.category.desserts}>Desserts</option>
+            <option value= {elem.category}>Cat</option>
+            <option value={'Apetizer'}>Appetizers</option>
+            <option value={'Breakfast'}>Breakfast</option>
+            <option value={'Lunch'}>Lunch</option>
+            <option value={'Main'}>Main</option>
+            <option value={'Drinks'}>Drinks</option>
+            <option value={'Desserts'}>Desserts</option>
           </select>
         </div>  
         <div className='two wide fields'>
@@ -110,7 +115,6 @@ class CreateMenu extends React.Component {
       uid: this.state.uid,
       dishValues: this.state.dishValues
     }) 
-    console.log(this.state)
     this.props.history.push('/view-menu')
   }
 
@@ -119,23 +123,24 @@ class CreateMenu extends React.Component {
       <div className='createMenu'>
         <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
           <Link to ='/main-menu' className='ui button active item'>Main Menu</Link>
-          <Link to ='/view-menu' className='item'>My Menu</Link>
+          <Link to ='/view-menu' className='item'>View Menu</Link>
          </div>
 
          <div className='ui container' style={{paddingTop:'2%', width: '637px'}}>
          <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a Menu</h1>
         <form onSubmit={this.handleSubmit} className="ui form" style={{textAlign: 'center', width: '100%'}}>
           <div className='menuBackground'>
+            <h3 className='createMenuTitle'>Menu</h3>
             <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
               <label>Category</label>
               <select onChange={this.handleChanges} className='ui fluid dropdown' name='category'>
                 <option value=''>Cat</option>
-                <option value='appetizers'>Appetizers</option>
-                <option value='breakfast'>Breakfast</option>
-                <option value='lunch'>Lunch</option>
-                <option value='mains'>Mains</option>
-                <option value='drinks'>Drinks</option>
-                <option value='desserts'>Desserts</option>
+                <option value='Appetizers'>Appetizers</option>
+                <option value='Breakfast'>Breakfast</option>
+                <option value='Lunch'>Lunch</option>
+                <option value='Main'>Main</option>
+                <option value='Drinks'>Drinks</option>
+                <option value='Desserts'>Desserts</option>
               </select>
             </div>  
             <div className='two wide fields'>

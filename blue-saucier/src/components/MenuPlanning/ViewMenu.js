@@ -2,13 +2,15 @@ import React from 'react';
 import fire from '../../config/firebase';
 import {Link} from 'react-router-dom';
 
+
 class ViewMenu extends React.Component {
   state = { 
     uid: '',
-    listData: []
+    menuData: [], 
   }
+
   componentDidMount() {
-    this.getListData();
+    this.getMenuData();
     this.getUserId();
   } 
 
@@ -16,16 +18,16 @@ class ViewMenu extends React.Component {
     this.unsubscribe()
   }
 
-  getListData(){
+  getMenuData(){
     const dataBase = fire.firestore();
     
-     this.unsubscribe = dataBase.collection('restaurantList').onSnapshot(snap => {
-      const listData = [];
-       snap.forEach(list => listData.push(({...list.data(), listId: list.id })))
-       this.setState({listData: listData})
+     this.unsubscribe = dataBase.collection('restaurantMenu').onSnapshot(snap => {
+        //Ading data to an array and then using setState to asign that array to our state, will allow us to display each of the fetched menus individually
+       const menuData = []
+       snap.forEach(menu => menuData.push(({ ...menu.data(), menuId: menu.id })))
+       this.setState({ menuData })
       })
-}
-
+    }
 getUserId() {
   fire.auth().onAuthStateChanged(user => {
     if (user) {
@@ -37,34 +39,39 @@ getUserId() {
 }
 
   render() {
+    console.log(this.state.menuData)
+    const menuDataOne = () => this.state.menuData.map(menuObject => {
 
-    const item = this.state.listData.map(listObject => {
-        if(listObject.uid === this.state.uid){
+   if(menuObject.uid === this.state.uid){
          return (
-          <div className='ui centered blue card' key={listObject.listId}>
-            <div className='content'>
-              <p><strong>Item:</strong> &nbsp; {listObject.item}</p>
-              <p><strong>Category:</strong> &nbsp; {listObject.category}</p>
-              <p><strong>Quantity needed:</strong> &nbsp; {listObject.quantity}</p>
-              <p><strong>Unit price:</strong> &nbsp; ${listObject.unitPrice}</p>
-              <p><strong>Total:</strong> &nbsp; ${listObject.total}</p>
-              <Link to={`edit-list/${listObject.listId}`}className='ui blue button'>Edit</Link>
-              <button className='ui inverted red button' onClick={() => fire.firestore().collection('restaurantList').doc(listObject.listId).delete()}>Delete</button>
+          <div className='ui centered blue card' key={menuObject.menuId} style={{width:'522px', marginBottom: '2%'}}>
+            <div className='menuBackground2'>
+              <h3 className='createMenuTitle' style={{marginTop:'0', marginLeft: '27%'}}>Menu</h3>
+              <h3 className='category' style={{marginBottom:'9%'}}> {menuObject.category} </h3>
+                <h4 className='dish'> {menuObject.dish}................................{menuObject.price} </h4>
+              <p className='description'> {menuObject.description} </p>
+              {menuObject.dishValues.map(dish => {
+                return <div className='extraDishes'>
+                            <h3 className='categoryTwo' style={{marginBottom:'9%'}}>{dish.category}</h3>
+                            <h4 className='dish'>{dish.dish}................................{dish.price}</h4>
+                          <p className='descriptionTwo'>{dish.description}</p>
+                       </div>
+                    })}
+              <Link to={`edit-list/${menuObject.listId}`}className='ui blue button' style ={{marginLeft:'27%'}}>Edit</Link>
+              <button className='ui red button' onClick={() => fire.firestore().collection('restaurantMenu').doc(menuObject.menuId).delete()}>Delete</button>
             </div>
           </div>
           )
         }
         else {return null}
     })
-    
     return (
-     <div className='view-list'>
+     <div className='viewMenu'>
         <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
           <Link to ='/main-menu' className='active item'>Main Menu</Link>
-          <Link to ='/create-lists' className='item'>Create List</Link>
+          <Link to ='/create-menu' className='item'>Create Menu</Link>
         </div>
-        <h2 className='ordering-title'>My Ordering Lists</h2>
-          {item}
+          {menuDataOne()}
      </div>
      
     );
