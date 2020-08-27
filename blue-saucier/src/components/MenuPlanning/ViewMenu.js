@@ -39,7 +39,6 @@ getUserId() {
 }
 
   render() {
-    console.log(this.state.menuData)
     const menuDataOne = () => this.state.menuData.map(menuObject => {
 
    if(menuObject.uid === this.state.uid){
@@ -50,14 +49,14 @@ getUserId() {
               <h3 className='category' style={{marginBottom:'9%'}}> {menuObject.category} </h3>
                 <h4 className='dish'> {menuObject.dish}................................{menuObject.price} </h4>
               <p className='description'> {menuObject.description} </p>
-              {menuObject.dishValues.map(dish => {
-                return <div className='extraDishes'>
+              {menuObject.dishValues.map((dish, i) => {
+                return <div className='extraDishes' key={i}>
                             <h3 className='categoryTwo' style={{marginBottom:'9%'}}>{dish.category}</h3>
                             <h4 className='dish'>{dish.dish}................................{dish.price}</h4>
                           <p className='descriptionTwo'>{dish.description}</p>
                        </div>
                     })}
-              <Link to={`edit-list/${menuObject.listId}`}className='ui blue button' style ={{marginLeft:'27%'}}>Edit</Link>
+              <Link to={`edit-menu/${menuObject.menuId}`}className='ui blue button' style ={{marginLeft:'27%'}}>Edit</Link>
               <button className='ui red button' onClick={() => fire.firestore().collection('restaurantMenu').doc(menuObject.menuId).delete()}>Delete</button>
             </div>
           </div>

@@ -121,7 +121,7 @@ class EditLists extends React.Component {
                 <option value='other'>Other</option>
               </select>
           </div>
-          <button type='submit' className='ui button blue'>Submit</button>
+          <button type='submit' className='ui button blue'>Submit Changes</button>
         </form>
       </div>
       </div>  
