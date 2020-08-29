@@ -18,6 +18,8 @@ import CreateMenu from './components/MenuPlanning/CreateMenu';
 import ViewMenu from './components/MenuPlanning/ViewMenu';
 import EditMenu from './components/MenuPlanning/EditMenu';
 
+import CalendarData from './components/Calendar/CalendarData';
+
 class App extends React.Component {
  
   render(){
@@ -26,6 +28,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
+              <Route path='/calendar' component={CalendarData} />
               <Route path='/edit-menu/:menuId' component={EditMenu}/>
               <Route path='/view-menu' component={ViewMenu} />
               <Route path='/create-menu' component={CreateMenu} />

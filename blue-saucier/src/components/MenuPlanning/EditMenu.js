@@ -32,7 +32,6 @@ class EditMenu extends React.Component {
         dish: menu.dish,
         description: menu.description,
         price: menu.price,
-        menuId: menu.menuId,
         uid: menu.uid,
         menuId: doc.id,
         dishValues: menu.dishValues

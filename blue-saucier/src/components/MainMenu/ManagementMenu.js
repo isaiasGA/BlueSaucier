@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import fire from '../../config/firebase';
 
+import calendarImg from '../../images/googleCalendar.png';
+import gmailImg from '../../images/gmail1.png'
+
 import MenuHeader from './MenuHeader';
+import calendarData from '../Calendar/CalendarData';
 
 class ManagementMenu extends React.Component {
 
@@ -15,7 +19,7 @@ class ManagementMenu extends React.Component {
     return (
       <div className='mainMenu'>
         <MenuHeader logout={this.logout}/>
-        <div className="ui four cards ui container" style={{marginTop: '4%'}}>
+        <div className="ui four link cards ui container" style={{marginTop: '4%'}}>
         <Link to="/list-menu" className="card">
           <div className="image">
             <img
@@ -43,19 +47,19 @@ class ManagementMenu extends React.Component {
             <h2 className="title">Edit Profile</h2>
           </div>
         </Link>
-        <Link to="/" className="card">
+        < button className="card calendarButton" onClick={() => calendarData()}>
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1511871893393-82e9c16b81e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              src={calendarImg}
               alt=""
             />
             <h2>Calendar</h2>
           </div>
-        </Link>
+        </button>
         <Link to="/" className="card">
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1581349437898-cebbe9831942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              src={gmailImg}
               alt=""
             />
             <h2>Email</h2>
