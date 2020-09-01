@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import fire from '../../config/firebase';
 
 import SuccessModal from './SuccessModal';
@@ -14,6 +14,7 @@ const initialState = {
   lastNameError: '',
   emailError: '',
   passwordError: '',
+  errorCode: '',
 
   modalOpen: false
 }
@@ -43,6 +44,7 @@ class SignUp extends React.Component {
     if(!this.state.password){
       firstNameError = 'Please provide a password'
     }
+    
 
      if(firstNameError || lastNameError || emailError || passwordError){
        this.setState({ firstNameError, lastNameError, emailError, passwordError });
@@ -62,10 +64,21 @@ class SignUp extends React.Component {
           .createUserWithEmailAndPassword(this.state.email, this.state.password)
           .catch(error => {
             console.log('error',error);
+            if(error.code === 'auth/email-already-in-use'){
+              this.setState({ errorCode: error.message})
+            }
           });
-          console.log(this.state)
-          this.setState(initialState);
-          this.setState({modalOpen: true})
+
+            return fire.auth().onAuthStateChanged(newUser => {
+            console.log(newUser)
+
+            newUser.updateProfile({
+              displayName:`${this.state.firstName} ${this.state.lastName}`
+            }).then(() => {
+              this.setState(initialState)
+              this.setState({modalOpen: true})
+            })
+          })
         }
       }
       
@@ -86,7 +99,7 @@ class SignUp extends React.Component {
          <h2 className='instructions'>Please provide the following information to create an account.</h2>
          <div className='formContent'>
 
-            <div className='ui error message' style={{width:'25%'}}>{this.state.firstNameError}</div>
+            <div className='ui error message' style={{width:'25%'}}>{this.state.firstNameError || this.state.errorCode}</div>
             <div className='field four wide field'>
               <label style={{color: 'white'}}>First Name</label>
               <input 

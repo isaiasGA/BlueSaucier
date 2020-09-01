@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import fire from '../../config/firebase';
 
 import calendarImg from '../../images/googleCalendar.png';
-import gmailImg from '../../images/gmail1.png'
 
 import MenuHeader from './MenuHeader';
 import calendarData from '../Calendar/CalendarData';
@@ -19,7 +18,7 @@ class ManagementMenu extends React.Component {
     return (
       <div className='mainMenu'>
         <MenuHeader logout={this.logout}/>
-        <div className="ui four link cards ui container" style={{marginTop: '4%'}}>
+        <div className="ui four link cards ui container" style={{marginTop: '12%'}}>
         <Link to="/list-menu" className="card">
           <div className="image">
             <img
@@ -38,16 +37,7 @@ class ManagementMenu extends React.Component {
             <h2 className="title">Menu Planning</h2>
           </div>
         </Link>
-        <Link to="" className="card">
-          <div className="image">
-            <img
-              src="https://images.unsplash.com/photo-1529003600303-bd51f39627fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-              alt="order tickets"
-            />
-            <h2 className="title">Edit Profile</h2>
-          </div>
-        </Link>
-        < button className="card calendarButton" onClick={() => calendarData()}>
+        < button className="card googleButton" onClick={() => calendarData()}>
           <div className="image">
             <img
               src={calendarImg}
@@ -56,13 +46,13 @@ class ManagementMenu extends React.Component {
             <h2>Calendar</h2>
           </div>
         </button>
-        <Link to="/" className="card">
+        <Link to="edit-profile" className="card">
           <div className="image">
             <img
-              src={gmailImg}
-              alt=""
+              src="https://images.unsplash.com/photo-1529003600303-bd51f39627fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              alt="order tickets"
             />
-            <h2>Email</h2>
+            <h2 className="title">Edit Profile</h2>
           </div>
         </Link>
       </div>

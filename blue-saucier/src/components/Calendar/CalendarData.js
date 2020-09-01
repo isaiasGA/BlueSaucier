@@ -2,8 +2,8 @@
   export default function calendarData() {
 
   var googleApi = window.gapi
-  var CLIENT_ID = '868775755554-k1qgqgs7q0p590pt8n6o2g9gmt2obnlf.apps.googleusercontent.com';
   var API_KEY = 'AIzaSyDNWCxifKowshB55MSOTuVPvnUFUiLNqG4';
+  var CLIENT_ID = '868775755554-k1qgqgs7q0p590pt8n6o2g9gmt2obnlf.apps.googleusercontent.com';
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
   var SCOPES = "https://www.googleapis.com/auth/calendar.events";
 

@@ -107,7 +107,7 @@ h2{
 
 .loginForm {
     width: 100%;
-    margin-left: 18%;
+    margin-left: 7%;
 }
 
 .formContent {
@@ -217,7 +217,6 @@ h2{
   min-height: 100%;
 }
 
-.calendarButton {
+.googleButton {
   color: #4183c4;
-  cursor: pointer;
 }
