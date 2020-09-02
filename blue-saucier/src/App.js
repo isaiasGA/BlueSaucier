@@ -18,7 +18,7 @@ import CreateMenu from './components/MenuPlanning/CreateMenu';
 import ViewMenu from './components/MenuPlanning/ViewMenu';
 import EditMenu from './components/MenuPlanning/EditMenu';
 
-import EditProfile from './components/EditProfile/EditProfile';
+import ManageProfile from './components/ManageProfile/ManageProfile';
 
 class App extends React.Component {
  
@@ -28,7 +28,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route path='/edit-profile' component={EditProfile} />
+              <Route path='/manage-profile' component={ManageProfile} />
               <Route path='/edit-menu/:menuId' component={EditMenu}/>
               <Route path='/view-menu' component={ViewMenu} />
               <Route path='/create-menu' component={CreateMenu} />
