@@ -235,3 +235,32 @@ h2{
 .manageProfileContent {
   padding-top: 17%;
 }
+
+
+
+.manageProfile{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/manageProfile.jpg)  no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+.manageProfileImg {
+background-color: #848484;
+}
+
+.editProfile{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/profileEdit.jpg)  no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+
+.editProfileContent {
+    text-align: center;
+    color: white;
+}
+
+.editProfileInstructions{
+    margin-right: 9%;
+    padding-top: 3%;
+}

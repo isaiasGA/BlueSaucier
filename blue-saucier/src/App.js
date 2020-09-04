@@ -18,7 +18,8 @@ import CreateMenu from './components/MenuPlanning/CreateMenu';
 import ViewMenu from './components/MenuPlanning/ViewMenu';
 import EditMenu from './components/MenuPlanning/EditMenu';
 
-import ManageProfile from './components/ManageProfile/ManageProfile';
+import ManageProfile from './components/ManageProfile/ViewProfile';
+import EditName from './components/ManageProfile/EditProfile';
 
 class App extends React.Component {
  
@@ -28,15 +29,19 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route path='/manage-profile' component={ManageProfile} />
+              <Route path='/edit-name' component={EditName} />
+              <Route path='/view-profile' component={ManageProfile} />
+
               <Route path='/edit-menu/:menuId' component={EditMenu}/>
               <Route path='/view-menu' component={ViewMenu} />
               <Route path='/create-menu' component={CreateMenu} />
               <Route path='/menu-planning-menu' component={MenuPlanningMenu} />
+
               <Route path='/view-lists' component={ViewLists}/> 
               <Route path='/edit-list/:listId' component={EditList}/>
               <Route path='/create-lists' component={CreateLists}/>
               <Route path='/list-menu'component={ListMenu} />
+
               <Route path='/main-menu'component={ManagementMenu} />
               <Route path='/sign-up' component={SignUp}/>
               <Route path='/log-in' component={LogIn}/> 

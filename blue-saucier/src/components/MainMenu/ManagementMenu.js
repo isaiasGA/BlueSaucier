@@ -46,13 +46,13 @@ class ManagementMenu extends React.Component {
             <h2>Calendar</h2>
           </div>
         </button>
-        <Link to="manage-profile" className="card">
+        <Link to="view-profile" className="card">
           <div className="image">
             <img
               src="https://images.unsplash.com/photo-1529003600303-bd51f39627fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
               alt="order tickets"
             />
-            <h2 className="title">Manage Profile</h2>
+            <h2 className="title">View Profile</h2>
           </div>
         </Link>
       </div>
