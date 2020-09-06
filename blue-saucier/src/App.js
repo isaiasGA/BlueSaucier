@@ -6,6 +6,9 @@ import Home from './components/Home&Auth/Home';
 import SignUp from './components/Home&Auth/SignUp';
 import LogIn from './components/Home&Auth/LogIn';
 
+import About from './components/Home&Auth/About';
+import Contact from './components/Home&Auth/Contact';
+
 import ManagementMenu from './components/MainMenu/ManagementMenu';
 import ListMenu from './components/OrderingLists/ListMenu';
 
@@ -41,6 +44,9 @@ class App extends React.Component {
               <Route path='/edit-list/:listId' component={EditList}/>
               <Route path='/create-lists' component={CreateLists}/>
               <Route path='/list-menu'component={ListMenu} />
+
+              <Route path='/about' component={About}/>
+              <Route path='/contact' component={Contact} />
 
               <Route path='/main-menu'component={ManagementMenu} />
               <Route path='/sign-up' component={SignUp}/>

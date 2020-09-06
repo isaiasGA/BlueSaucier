@@ -1,18 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Footer = () => {
+const Footer = (props) => {
+  const {menuOne, menuTwo, linkOne, linkTwo} = props;
     return (
     <div className='footer'>
-      <div className='ui three item ui inverted segment ui mini menu'>
-          <Link to ='/' className='blue button item'>
-            Home
+      <div className='ui two item ui inverted segment ui mini menu'>
+          <Link to ={linkOne} className='blue button item'>
+            {menuOne}
           </Link>
-          <Link to ='/about' className= 'button item'>
-            About
-          </Link>
-          <Link to ='/contact' className='blue button item'>
-            Contact
+          <Link to = {linkTwo} className= 'button item'>
+            {menuTwo}
           </Link>
       </div>
     </div>

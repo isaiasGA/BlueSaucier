@@ -71,7 +71,7 @@ class SignIn extends React.Component {
             </div>
           </form>
         </div>  
-        <Footer />
+        <Footer menuOne= 'Home' menuTwo='Contact' linkOne='/' linkTwo='/contact'/>
       </>
     )
   }

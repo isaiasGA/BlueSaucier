@@ -13,7 +13,7 @@ function Home(){
             <Link className='massive ui button ui inverted button' to='/log-in'>Log In</Link>
         </div>
       </div>
-      <Footer />
+      <Footer  menuOne='Contact' menuTwo='About' linkOne='/contact' linkTwo='/about'/>
       </>
     )
   }

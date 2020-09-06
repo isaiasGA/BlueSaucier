@@ -84,7 +84,6 @@ class SignUp extends React.Component {
         this.setState({[event.target.name]: event.target.value});
       }
     
-   
   render() {
     return(
       <>
@@ -150,7 +149,7 @@ class SignUp extends React.Component {
           <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>
          </div>
         </form>
-        <Footer/> 
+        <Footer menuOne='Home' menuTwo='Contact' linkOne='/' linkTwo='/contact'/> 
       </>  
     )
   }
