@@ -33,7 +33,7 @@ class ManageProfile extends React.Component {
               <p className='editPara'><strong>Email:</strong>  &nbsp; {this.state.email}</p>
               <p className='editPara'><strong>Password:</strong> &nbsp; *********</p>
               <div className='manageButtons'>
-                <Link to='/edit-name' className='ui blue button'>Edit Profile</Link>
+                <Link to='/edit-profile' className='ui blue button'>Edit Profile</Link>
               </div>
             </div>           
           </div>

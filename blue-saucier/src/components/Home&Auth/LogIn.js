@@ -64,6 +64,7 @@ class SignIn extends React.Component {
                   onChange={this.handleChanges} 
                   type="password" 
                   name='password' 
+                  placeholder='Password'
                   autoComplete='off'/>
               </div>
               <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>

@@ -29,7 +29,7 @@ class App extends React.Component {
         <Router>
           <div>
             <Switch>
-              <Route path='/edit-name' component={EditName} />
+              <Route path='/edit-profile' component={EditName} />
               <Route path='/view-profile' component={ManageProfile} />
 
               <Route path='/edit-menu/:menuId' component={EditMenu}/>

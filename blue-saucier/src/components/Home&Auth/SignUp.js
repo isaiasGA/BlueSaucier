@@ -70,8 +70,6 @@ class SignUp extends React.Component {
           });
 
             return fire.auth().onAuthStateChanged(newUser => {
-            console.log(newUser)
-
             newUser.updateProfile({
               displayName:`${this.state.firstName} ${this.state.lastName}`
             }).then(() => {
