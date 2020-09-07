@@ -264,3 +264,39 @@ background-color: #848484;
     margin-right: 9%;
     padding-top: 3%;
 }
+
+.about{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/about.jpg)  no-repeat center center fixed;
+  background-size: cover;
+}
+
+.aboutTitle{
+    padding-top: 3%;
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 4%;
+}
+
+.appDescription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.aboutPhotoContainer{
+    display: flex;
+    margin-right: 4%;
+}
+
+.aboutPhotos {
+    width: 34%;
+    margin-right: 2%;
+    border-radius: 8%;
+}
+
+.aboutPhotos:last-child {
+  padding-right: 1.8%;
+}
+
+
