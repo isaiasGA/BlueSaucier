@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const Contact = () => {
   return(
     <div className='contact'>
-       <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
+      <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
         <Link to ='/' className='active item'>Home</Link>
       </div>
       <div className='ui container'>
@@ -29,7 +29,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   )

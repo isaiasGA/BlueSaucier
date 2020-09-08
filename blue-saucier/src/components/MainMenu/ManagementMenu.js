@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import fire from '../../config/firebase';
 
 import calendarImg from '../../images/googleCalendar.png';
+import menuList from '../../images/menuList.jpg';
+import menuCreate from '../../images/menuCreate.jpg';
+import menuProfile from '../../images/menuProfile.jpg';
+
 
 import MenuHeader from './MenuHeader';
 import calendarData from '../Calendar/CalendarData';
@@ -22,7 +26,7 @@ class ManagementMenu extends React.Component {
         <Link to="/list-menu" className="card">
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1568847811512-803314424fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              src={menuList}
               alt="Flower and clipboard"
             />
             <h2> Ordering List</h2>
@@ -31,7 +35,7 @@ class ManagementMenu extends React.Component {
         <Link to="menu-planning-menu" className="card">
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1568031818486-50dc2230ba10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              src={menuCreate}
               alt="Menu"
             />
             <h2 className="title">Menu Planning</h2>
@@ -41,7 +45,7 @@ class ManagementMenu extends React.Component {
           <div className="image">
             <img
               src={calendarImg}
-              alt=""
+              alt="Google calendar"
             />
             <h2>Calendar</h2>
           </div>
@@ -49,13 +53,13 @@ class ManagementMenu extends React.Component {
         <Link to="view-profile" className="card">
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1529003600303-bd51f39627fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-              alt="order tickets"
+              src={menuProfile}
+              alt="restaurant tickets"
             />
             <h2 className="title">View Profile</h2>
           </div>
         </Link>
-      </div>
+       </div>
       </div> 
     );
   }

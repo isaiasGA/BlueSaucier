@@ -22,9 +22,7 @@ class MenuHeader extends React.Component {
     clearInterval(this.timeInfo);
 
   }
-
  
-
   authListener() {
      this.user = fire.auth().onAuthStateChanged(userName => {
       if (userName) { this.setState({ userName }) }
