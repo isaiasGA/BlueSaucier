@@ -19,13 +19,13 @@ const Contact = () => {
           <div className='ui card'>
             <div className='contactContent'>
               <h3 className='contactHeader'>Twitter</h3>
-              <Icon name='twitter' style={{width: '57%', height: '62px', fontSize: '1.4rem'}}> &nbsp; <a href='https://twitter.com/IsaiasGar_Ar ' target='_blank'>twitter.com/IsaiasGar_Ar</a></Icon>            
+              <Icon name='twitter' style={{width: '57%', height: '62px', fontSize: '1.4rem'}}> &nbsp; <a href='https://twitter.com/IsaiasGar_Ar ' target='_blank' rel="noopener noreferrer">twitter.com/IsaiasGar_Ar</a></Icon>            
             </div>
           </div>
           <div className='ui card' style={{height: '100px'}}>
             <div className='contactContent'>
               <h3 className='contactHeader'>GitHub</h3>
-              <Icon name='github' style={{width: '56%', height: '64px', fontSize: '1.4rem'}}> &nbsp; <a href='https://github.com/isaiasGA' target='_blank'>github.com/isaiasGA</a></Icon>            
+              <Icon name='github' style={{width: '56%', height: '64px', fontSize: '1.4rem'}}> &nbsp; <a href='https://github.com/isaiasGA' target='_blank' rel="noopener noreferrer">github.com/isaiasGA</a></Icon>            
             </div>
           </div>
         </div>
