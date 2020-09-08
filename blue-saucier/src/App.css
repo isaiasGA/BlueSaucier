@@ -299,4 +299,21 @@ background-color: #848484;
   padding-right: 1.8%;
 }
 
+.contactCards{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 34%;
+  color:white
+}
 
+.contact{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/contact.jpg)  no-repeat center center fixed;
+  background-size: cover;
+  height: 899px;
+}
+
+.contactContent {
+  background-color: #141C2C;
+}

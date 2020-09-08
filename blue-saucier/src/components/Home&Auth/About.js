@@ -23,9 +23,9 @@ const About = () => {
         <div className='ui clearing divider'></div>
           <p style={{fontSize: '1.3rem'}}>Blue Saucier is a dynamic and user friendly application. It's primary goal is to assist in basic, yet imporant kitchen management tasks and menu planning. </p>
           <div className='aboutPhotoContainer'>
-          <img className='aboutPhotos' src={aboutOne}/>
-          <img className='aboutPhotos'src={aboutTwo}/>
-          <img className='aboutPhotos'src={aboutThree}/>
+          <img className='aboutPhotos' src={aboutOne} alt='two cooks in a kitchen'/>
+          <img className='aboutPhotos'src={aboutTwo} alt='two brown pages'/>
+          <img className='aboutPhotos'src={aboutThree} alt='woman writting on paper'/>
           </div>
         </div>
       <div className='appDescription'>
@@ -40,8 +40,8 @@ const About = () => {
              </ul>
             </div>
           </div>
-          <div class="image">
-            <img src={aboutList}/>
+          <div className="image">
+            <img src={aboutList} alt='Several cooking ingredients'/>
           </div>
         </div>
         <div className='ui card' style={{textAlign: 'center'}}>
@@ -55,8 +55,8 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div class="image">
-            <img src={menuPlanning}/>
+          <div className="image">
+            <img src={menuPlanning} alt='a food menu'/>
           </div>
         </div>
         <div className='ui card' style={{textAlign: 'center'}}>
@@ -68,8 +68,8 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div class="image">
-            <img src={googleCalendar}/>
+          <div className="image">
+            <img src={googleCalendar} alt='Google calendar'/>
           </div>
         </div>
         <div className='ui card' style={{textAlign: 'center'}}>
@@ -81,8 +81,8 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div class="image">
-            <img src={aboutProfile}/>
+          <div className="image" >
+            <img src={aboutProfile} alt='cook doing some prep'/>
         </div>
         </div>
       </div>
@@ -93,17 +93,3 @@ const About = () => {
 }
 
 export default About;
-
-
-
- {/* <div className='ui card' style={{textAlign:'center', marginLeft: '32%', width:'420px'}}>
-          <div className='content'>
-            <div className='header' style={{fontSize: '1.5rem'}}>Usefull features to improve your productivity!</div>
-            <div className='description' style={{marginLeft:'0'}}>
-             <p style={{fontSize: '1.3rem'}}>Blue Saucier is a dynamic and user friendly application. It's primary goal is to help manage some of the tasks involved in managing the kitchen of a restaurant. </p>
-            </div>
-          </div>
-          <div class="image">
-           <img src={appDesc}/>
-          </div>
-        </div> */}
