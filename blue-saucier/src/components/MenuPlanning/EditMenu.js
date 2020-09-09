@@ -2,17 +2,17 @@ import React from 'react';
 import fire from '../../config/firebase';
 import { Link } from 'react-router-dom';
 
+
+
 class EditMenu extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
+    state ={
       category: '',
       dish:'',
       description: '',
       price:'',
       menuId: '',
       uid: '',
-  
+    
       dishValues: [{
        category: '',
        dish: '',
@@ -20,11 +20,14 @@ class EditMenu extends React.Component {
        price: '', 
       }]
     }
-  }
 
   componentDidMount(){
+   this.getMenuData();
+    }
+
+  getMenuData = () => {
     const getMenu = fire.firestore().collection('restaurantMenu').doc(this.props.match.params.menuId);
-    
+      
     getMenu.get().then((doc) => {
       const menu = doc.data();
       this.setState({
@@ -35,8 +38,8 @@ class EditMenu extends React.Component {
         uid: menu.uid,
         menuId: doc.id,
         dishValues: menu.dishValues
-       })
-     });
+         })
+      });
     }
 
   getDishInputs(){
@@ -74,14 +77,14 @@ class EditMenu extends React.Component {
 
   onChange = (event) => {
    this.setState({[event.target.name]: event.target.value})
-  }
+    }
 
   onChangeNewDish = (i, event) => {
     const {name, value} = event.target;
     let dishValues = [...this.state.dishValues];
     dishValues[i] = {...dishValues[i], [name]: value};
     this.setState({dishValues});
-  }
+   }
 
   onSubmit = (e) => {
     e.preventDefault();
@@ -121,14 +124,13 @@ class EditMenu extends React.Component {
     console.log(this.state.menuId)
     return(
       <div className='editMenu'>
-         <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
+        <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
           <Link to ='/main-menu' className='active item'>Main Menu</Link>
           <Link to ='/view-menu' className='item'>View Menu</Link>
         </div>
-
         <div className='ui container' style={{paddingTop:'2%', width: '637px'}}>
          <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a Menu</h1>
-        <form onSubmit={this.onSubmit} className="ui form" style={{textAlign: 'center', width: '100%'}}>
+         <form onSubmit={this.onSubmit} className="ui form" style={{textAlign: 'center', width: '100%'}}>
           <div className='menuBackground'>
             <h3 className='createMenuTitle'>Menu</h3>
             <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
@@ -148,25 +150,23 @@ class EditMenu extends React.Component {
                 <label>Dish</label>
                 <input value={this.state.dish} onChange={this.onChange} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
               </div>
-            <div className='four wide field'>
+              <div className='four wide field'>
               <label>Price</label>
               <input value={this.state.price} onChange={this.onChange} type="text" name='price' placeholder="$" autoComplete='off'/>
             </div>
-          </div>  
+            </div>  
             <div className='twelve wide field'>
-              <label>Description</label>
-              <textarea rows='1' value={this.state.description} onChange={this.onChange} type="text" name='description' placeholder="Description" autoComplete='off'/>
-            </div>
+            <label>Description</label>
+            <textarea rows='1' value={this.state.description} onChange={this.onChange} type="text" name='description' placeholder="Description" autoComplete='off'/>
+          </div>
             {this.getDishInputs()}
           </div>
           <button className="big ui black button" type="submit" style={{margin:'6%'}}>Submit Changes</button>
         </form>
        </div>
       </div>  
-    )
-   
+    );
   }
-
 }
 
 

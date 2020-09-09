@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import fire from '../../config/firebase';
 
+import createListImg from '../../images/menuCreateList.jpg';
+import viewListImg from '../../images/menuViewList.jpg';
+
 class ListMenu extends React.Component {
 
-  
 logout = () => {
   fire.auth().signOut(); 
   this.props.history.push('/')
@@ -20,28 +22,28 @@ logout = () => {
 
        <div className='listMenu'>
           <div className='ui two cards ui container' style={{padding: '14% 11%', margin:'0' }}>
-        <Link to ='/create-lists' className='card'>
-          <div className="image">
-            <img
-              src="https://images.unsplash.com/photo-1504632236107-4ae29a44f388?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-              alt="notebook and pen"
-            />
-            <h2> Create List </h2>
+            <Link to ='/create-lists' className='card'>
+              <div className="image">
+                <img
+                  src={createListImg}
+                  alt="cooking ingredients"
+                />
+                <h2> Create List </h2>
+              </div>
+            </Link>
+            <Link to='/view-lists' className='card'>
+              <div className="image">
+                <img
+                  src={viewListImg}
+                  alt="spices"
+                />
+                <h2> View Lists</h2>
+              </div>
+            </Link>
           </div>
-        </Link>
-          <Link to='/view-lists' className='card'>
-            <div className="image">
-              <img
-                src="https://images.unsplash.com/photo-1517499414974-3b42addf2d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-                alt="clipboards"
-              />
-              <h2> View Lists</h2>
-            </div>
-          </Link>
-        </div>
        </div>
       </div>
-    )
+    );
   }
 }
 

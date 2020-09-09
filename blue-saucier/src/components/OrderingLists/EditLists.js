@@ -2,9 +2,7 @@ import React from 'react';
 import fire from '../../config/firebase';
 
 class EditLists extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
+    state = {
       item: '',
       category: '',
       quantity: '',
@@ -13,57 +11,59 @@ class EditLists extends React.Component {
       docId: '',
       uid: ''
     }
-  }
 
-  componentDidMount(){
-    const getLists = fire.firestore().collection('restaurantList').doc(this.props.match.params.listId);
+    componentDidMount(){
+      this.getListData();
+      }
+
+    getListData = () => {
+      const getLists = fire.firestore().collection('restaurantList').doc(this.props.match.params.listId);
     
-    getLists.get().then((doc) => {
-      const list = doc.data();
-      this.setState({
-        item: list.item,
-        category: list.category,
-        quantity: list.quantity,
-        unitPrice: list.unitPrice,
-        total: list.total,
-        uid: list.uid,
-        docId: doc.id
-       })
-     });
+      getLists.get().then((doc) => {
+        const list = doc.data();
+        this.setState({
+          item: list.item,
+          category: list.category,
+          quantity: list.quantity,
+          unitPrice: list.unitPrice,
+          total: list.total,
+          uid: list.uid,
+          docId: doc.id
+         })
+       });
     }
 
-  onChange = (event) => {
-   this.setState({[event.target.name]: event.target.value})
-  }
+    onChange = (event) => {
+    this.setState({[event.target.name]: event.target.value})
+    }
 
-  onSubmit = (e) => {
-    e.preventDefault();
+    onSubmit = (e) => {
+      e.preventDefault();
 
-    const { item, category,quantity, unitPrice, total, uid } = this.state;
+      const { item, category,quantity, unitPrice, total, uid } = this.state;
 
-    const updateList = fire.firestore().collection('restaurantList').doc(this.state.docId);
-    updateList.set({
-      item,
-      category,
-      quantity, 
-      unitPrice, 
-      total,
-      uid
-    }).then(() => {
-      this.setState({
-        item: '',
-        category: '',
-        quantity: '', 
-        unitPrice: '', 
-        total: ''
+      const updateList = fire.firestore().collection('restaurantList').doc(this.state.docId);
+      updateList.set({
+        item,
+        category,
+        quantity, 
+        unitPrice, 
+        total,
+        uid
+      }).then(() => {
+        this.setState({
+          item: '',
+          category: '',
+          quantity: '', 
+          unitPrice: '', 
+          total: ''
+        });
+        this.props.history.push("/view-lists")
+      })
+      .catch(error => {
+        console.log('error', error)
       });
-      this.props.history.push("/view-lists")
-    })
-    .catch(error => {
-      console.log('error', error)
-    });
-
-  }
+    }
 
   render(){
     return(
@@ -125,12 +125,8 @@ class EditLists extends React.Component {
         </form>
       </div>
       </div>  
-    )
-   
+    );
   }
-
 }
-
-
 
 export default EditLists;

@@ -98,7 +98,7 @@ class CreateLists extends React.Component {
           <div className="three wide field">
             <label style={{color: 'white'}}>Category</label>
             <select onChange={this.handleChanges} className='ui fluid dropdown' name='category'>
-                  <option value=''>Cat</option>
+                <option value=''>Cat</option>
                 <option value='produce'>Produce</option>
                 <option value='herbs'>Herbs</option>
                 <option value='eggs'>Eggs</option>

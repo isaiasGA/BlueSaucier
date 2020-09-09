@@ -39,7 +39,7 @@ class ManageProfile extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

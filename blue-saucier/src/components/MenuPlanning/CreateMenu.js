@@ -3,9 +3,7 @@ import fire from '../../config/firebase';
 import { Link } from 'react-router-dom';
 
 class CreateMenu extends React.Component {
-  constructor(props){
-    super(props);
-   this.state = {
+   state = {
       category: '',
       dish:'',
       description: '',
@@ -20,7 +18,6 @@ class CreateMenu extends React.Component {
         price: ''
       }]
     }
-  }
  
 
   componentDidMount() {
@@ -37,7 +34,7 @@ class CreateMenu extends React.Component {
          this.setState({ uid: user.uid, user: user.displayName})
       } else {
         this.setState({ uid: null });
-      }
+       }
     });
   }
 
@@ -78,7 +75,7 @@ class CreateMenu extends React.Component {
           onClick={this.removeDish.bind(this, i)}
         />
       </div>
-    ))
+    ));
   }
 
   handleChangesNewDish = (i, event) => {
@@ -86,11 +83,11 @@ class CreateMenu extends React.Component {
     let dishValues = [...this.state.dishValues];
     dishValues[i] = {...dishValues[i], [name]: value};
     this.setState({dishValues});
-  }
+    }
 
   handleChanges = event => {
     this.setState({[event.target.name]: event.target.value});
-  }
+    }
 
   addNewDish(){
     this.setState(prevState => ({ dishValues: [...prevState.dishValues, {category: '', dish: '', description: '', price: ''}]
@@ -101,7 +98,7 @@ class CreateMenu extends React.Component {
     let dishValues = [...this.state.dishValues];
     dishValues.splice(i, 1);
     this.setState({ dishValues })
-  }
+    }
 
   handleSubmit = event =>{
     event.preventDefault();
@@ -114,9 +111,9 @@ class CreateMenu extends React.Component {
       user: this.state.user,
       uid: this.state.uid,
       dishValues: this.state.dishValues
-    }) 
+    }); 
     this.props.history.push('/view-menu')
-  }
+   }
 
   render() {
     return(  
@@ -148,11 +145,11 @@ class CreateMenu extends React.Component {
                 <label>Dish</label>
                 <input value={this.state.dish} onChange={this.handleChanges} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
               </div>
-            <div className='four wide field'>
-              <label>Price</label>
-              <input value={this.state.price} onChange={this.handleChanges} type="text" name='price' placeholder="$" autoComplete='off'/>
-            </div>
-          </div>  
+              <div className='four wide field'>
+                <label>Price</label>
+                <input value={this.state.price} onChange={this.handleChanges} type="text" name='price' placeholder="$" autoComplete='off'/>
+              </div>
+            </div>  
             <div className='twelve wide field'>
               <label>Description</label>
               <textarea rows='1' value={this.state.description} onChange={this.handleChanges} type="text" name='description' placeholder="Description" autoComplete='off'/>
@@ -170,8 +167,8 @@ class CreateMenu extends React.Component {
         </form>
        </div>
       </div>
-    )
-  };
+    );
+  }
 }
 
 export default CreateMenu;

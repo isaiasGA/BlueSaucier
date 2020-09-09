@@ -12,12 +12,10 @@ class ViewMenu extends React.Component {
   componentDidMount() {
     this.getMenuData();
     this.getUserId();
-  } 
-
+    } 
   componentWillUnmount(){
     this.unsubscribe()
-  }
-
+    }
   getMenuData(){
     const dataBase = fire.firestore();
     
@@ -26,22 +24,22 @@ class ViewMenu extends React.Component {
        const menuData = []
        snap.forEach(menu => menuData.push(({ ...menu.data(), menuId: menu.id })))
        this.setState({ menuData })
-      })
+      });
     }
-getUserId() {
-  fire.auth().onAuthStateChanged(user => {
-    if (user) {
-       this.setState({ uid: user.uid })
-    } else {
-      this.setState({ uid: null });
+  getUserId() {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ uid: user.uid })
+      } else {
+        this.setState({ uid: null });
+      }
+    });
     }
-  });
-}
 
   render() {
     const menuDataOne = () => this.state.menuData.map(menuObject => {
 
-   if(menuObject.uid === this.state.uid){
+    if(menuObject.uid === this.state.uid){
          return (
           <div className='ui centered blue card' key={menuObject.menuId} style={{width:'522px', marginBottom: '2%'}}>
             <div className='menuBackground2'>
@@ -49,10 +47,11 @@ getUserId() {
               <h3 className='category' style={{marginBottom:'9%'}}> {menuObject.category} </h3>
                 <h4 className='dish'> {menuObject.dish}................................{menuObject.price} </h4>
               <p className='description'> {menuObject.description} </p>
-              {menuObject.dishValues.map((dish, i) => {
+
+                {menuObject.dishValues.map((dish, i) => {
                 return <div className='extraDishes' key={i}>
-                            <h3 className='categoryTwo' style={{marginBottom:'9%'}}>{dish.category}</h3>
-                            <h4 className='dish'>{dish.dish}................................{dish.price}</h4>
+                          <h3 className='categoryTwo' style={{marginBottom:'9%'}}>{dish.category}</h3>
+                          <h4 className='dish'>{dish.dish}................................{dish.price}</h4>
                           <p className='descriptionTwo'>{dish.description}</p>
                        </div>
                     })}
@@ -60,19 +59,19 @@ getUserId() {
               <button className='ui red button' onClick={() => fire.firestore().collection('restaurantMenu').doc(menuObject.menuId).delete()}>Delete</button>
             </div>
           </div>
-          )
+          );
         }
         else {return null}
     })
-    return (
-     <div className='viewMenu'>
-        <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
-          <Link to ='/main-menu' className='active item'>Main Menu</Link>
-          <Link to ='/create-menu' className='item'>Create Menu</Link>
-        </div>
-          {menuDataOne()}
-     </div>
-     
+    
+      return (
+        <div className='viewMenu'>
+          <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
+            <Link to ='/main-menu' className='active item'>Main Menu</Link>
+            <Link to ='/create-menu' className='item'>Create Menu</Link>
+          </div>
+         {menuDataOne()}
+        </div> 
     );
   }
  

@@ -16,7 +16,7 @@ import CreateLists from './components/OrderingLists/CreateLists';
 import ViewLists from './components/OrderingLists/ViewLists';
 import EditList from './components/OrderingLists/EditLists';
 
-import MenuPlanningMenu from './components/MenuPlanning/MenuPlanningMenu';
+import MenuPlanning from './components/MenuPlanning/MenuPlanning';
 import CreateMenu from './components/MenuPlanning/CreateMenu';
 import ViewMenu from './components/MenuPlanning/ViewMenu';
 import EditMenu from './components/MenuPlanning/EditMenu';
@@ -38,7 +38,7 @@ class App extends React.Component {
               <Route path='/edit-menu/:menuId' component={EditMenu}/>
               <Route path='/view-menu' component={ViewMenu} />
               <Route path='/create-menu' component={CreateMenu} />
-              <Route path='/menu-planning-menu' component={MenuPlanningMenu} />
+              <Route path='/menu-planning' component={MenuPlanning} />
 
               <Route path='/view-lists' component={ViewLists}/> 
               <Route path='/edit-list/:listId' component={EditList}/>

@@ -7,14 +7,15 @@ class ViewLists extends React.Component {
     uid: '',
     listData: []
   }
+
   componentDidMount() {
     this.getListData();
     this.getUserId();
-  } 
+    } 
 
   componentWillUnmount(){
     this.unsubscribe()
-  }
+    }
 
   getListData(){
     const dataBase = fire.firestore();
@@ -24,17 +25,17 @@ class ViewLists extends React.Component {
        snap.forEach(list => listData.push(({...list.data(), listId: list.id })))
        this.setState({listData: listData})
       })
-}
-
-getUserId() {
-  fire.auth().onAuthStateChanged(user => {
-    if (user) {
-       this.setState({ uid: user.uid })
-    } else {
-      this.setState({ uid: null });
     }
-  });
-}
+
+  getUserId() {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ uid: user.uid })
+      } else {
+        this.setState({ uid: null });
+      }
+    });
+   }
 
   render() {
 

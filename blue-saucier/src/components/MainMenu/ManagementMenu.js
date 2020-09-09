@@ -32,7 +32,7 @@ class ManagementMenu extends React.Component {
             <h2> Ordering List</h2>
           </div>
         </Link>
-        <Link to="menu-planning-menu" className="card">
+        <Link to="menu-planning" className="card">
           <div className="image">
             <img
               src={menuCreate}
