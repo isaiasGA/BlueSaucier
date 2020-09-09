@@ -39,16 +39,17 @@ class LogInForm extends React.Component {
 
   render(){
     return(
-      <div className='signIn'>
+      <div className='login ui contaniner'>
         <form onSubmit={this.handleSubmit} className=" loginForm ui form error">
-          <div className='signContent'>
-            <h3 className='instructions'>Log In</h3>
-            <div className="ui error message" style={{width:'25%', display:`${this.state.display}`}}>
-              <div className='header'>{this.state.errorCode }</div>
+          <div>
+            <h3 className='loginTitle'>Log In</h3>
+            <div className="ui error message loginErrorMessage" style={{display:`${this.state.display}`}}>
+              <div className='loginErrorCodeMessage'>{this.state.errorCode }</div>
             </div>
-            <div className="field four wide field">
+            <div className="loginInputField">
               <label style={{color: 'white'}}>E-mail</label>
-              <input 
+              <input
+                className='loginInput' 
                 value={this.state.email} 
                 onChange={this.handleChanges} 
                 type="email" name='email' 
@@ -56,9 +57,10 @@ class LogInForm extends React.Component {
                 autoComplete='off'
                 />
             </div>
-            <div className="field four wide field">
+            <div className="loginInputField">
               <label style={{color: 'white'}}>Password</label>
               <input 
+                className='loginInput' 
                 value={this.state.password} 
                 onChange={this.handleChanges} 
                 type="password" 
@@ -66,7 +68,7 @@ class LogInForm extends React.Component {
                 placeholder='Password'
                 autoComplete='off'/>
             </div>
-          <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>
+          <button className="loginSubmitBttn" type="submit">Submit</button>
         </div>
       </form>
     </div>  

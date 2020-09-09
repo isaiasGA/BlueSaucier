@@ -1,7 +1,68 @@
+                                    /*General Styles*/
 
-h2{
+/* - 1rem will now be equal to 10px
+    - this will create a font size that will readjust to an user's setting
+*/
+
+h2 {
   text-align-last: center;
 }
+/*Sign up*/
+ .signUp {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
+    height: 990px;
+    background-size: cover;
+    padding-left: 34%;
+    padding-top: 13%;
+}
+
+                        /*Log In*/
+
+.login {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+  padding-left: 34%;
+  padding-top: 14%;
+}
+.loginTitle {
+    margin-left: 7%;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.loginForm {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 15%;
+}
+
+.loginInputField {
+  width: 23%;
+  margin-top: 3%;
+}
+
+.loginErrorMessage {
+  width: 25%
+}
+
+.loginSubmitBttn {
+    margin-left: 5%;
+    margin-top: 3%;
+    padding: 1% 4%;
+    border-radius: 6%;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    color:#646464;
+    background: #DCDCDC;
+}
+
+
+
+
+/*Contact, About, Footer, */ 
+/*Home*/ 
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
   filter: grayscale(100%);
@@ -21,35 +82,14 @@ h2{
   margin-top: 20%;
 }
 
-.header {
-  font-size: 1rem;
-}
 
-.signUp {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
-    height: 990px;
-    background-size: cover;
-    padding-left: 34%;
-    padding-top: 13%;
-}
 
-.signIn {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
-  height: 990px;
-  background-size: cover;
-  padding-left: 34%;
-  padding-top: 14%;
-}
+/**/ 
+/**/  
 
-.instructions {
-  margin-right: 40%;
-    color: white;
-    font-size: 1.5rem;
-}
 
-.field {
-  margin-left: 24%;
-}
+
+
 
 .cards {
   margin: 8% 2%;
@@ -105,10 +145,7 @@ h2{
     margin-left: 91%;
 }
 
-.loginForm {
-    width: 100%;
-    margin-left: 7%;
-}
+
 
 .formContent {
     margin-left: 17%;
@@ -317,3 +354,43 @@ background-color: #848484;
 .contactContent {
   background-color: #141C2C;
 }
+
+/*Log In Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .login {
+    padding-left: 26%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginTitle {
+   width: 34vw;
+   font-size: 2rem;
+   margin-left: 0;
+   padding-left: 24%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginForm {
+    margin-left: 0;
+    margin-top: 56%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginInputField {
+    width: 50vw;
+    margin-top: 5%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginSubmitBttn {
+    margin-left: 16%;
+    margin-top: 11%;
+    padding: 3% 10%;
+  }
+}
+
