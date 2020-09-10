@@ -1,11 +1,12 @@
                                     /*General Styles*/
 
-/* - 1rem will now be equal to 10px
-    - this will create a font size that will readjust to an user's setting
-*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
 
 h2 {
   text-align-last: center;
+}
+button {
+  font-family: 'Raleway', sans-serif;
 }
                               /*Sign up*/
 
@@ -92,6 +93,7 @@ h2 {
 
 
 /*Contact, About, Footer, */ 
+
 /*Home*/ 
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
@@ -100,16 +102,39 @@ h2 {
   background-size: cover;
 }
 
-.home-content {
-    padding-top: 30%;
-    margin-left: 42%; 
+.homeContent {
+  padding-top: 29%;
+  margin-left: 39%;
 }
 
-.home-title {
+.homeTitle {
   font-size: 5.5rem;
   color: white;
-  margin-bottom: 4%;
-  margin-top: 20%;
+  margin-bottom: 6%;
+}
+
+.homeBtttnsContainer {
+  align-content: space-between;
+  width: 100%;
+}
+
+.homeBttns {
+  margin-right: 15%;
+  padding: 2% 5%;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.homeBttns:hover {
+  background-color: white;
+  color: black;
 }
 
 
@@ -488,5 +513,39 @@ background-color: #848484;
     margin-left: 16%;
     margin-top: 11%;
     padding: 3% 10%;
+  }
+}
+
+/* Home Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .homeContent {
+    margin-left: 7%;
+    padding-top: 85%;
+  }
+}
+
+@media(max-width: 500px){
+  .homeTitle {
+    font-size: 4.5rem;
+    margin-bottom: 13%;
+ }
+}
+
+@media(max-width: 500px){
+  .homBttnsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+}
+
+@media(max-width: 500px){
+  .homeBttns {
+    margin-bottom: 16%;
+    padding: 4% 3%;
+    background: white;
+    color: black;
+    border: solid 4px grey;
   }
 }
