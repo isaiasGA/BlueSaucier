@@ -19,8 +19,13 @@ const initialState = {
   modalOpen: false
 }
 
+
 class SignUpForm  extends React.Component {
   state = initialState;
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   validateInputs = () => {
 
@@ -97,6 +102,7 @@ class SignUpForm  extends React.Component {
 
   
   render(){
+    
     const {firstName, lastName, email, password} = this.state;
 
     return (
@@ -106,10 +112,10 @@ class SignUpForm  extends React.Component {
           modalOpen={this.state.modalOpen}
         />
         <form onSubmit={this.handleSubmit} className="signUp ui form error">
-          <h2 className='instructions'>Please provide the following information to create an account.</h2>
-          <div className='formContent'>
-            <div className='ui error message' style={{width:'25%'}}>{this.state.firstNameError || this.state.errorCode}</div>
-            <div className='field four wide field'>
+          <h2 className='signupInstructions'>Please provide the following information to create an account.</h2>
+          <div className='signupFormContent'>
+            <div className='ui error message' style={{width:'50%'}}>{this.state.firstNameError || this.state.errorCode}</div>
+            <div className='signupFields'>
               <label style={{color: 'white'}}>First Name</label>
               <input 
                 value={firstName} 
@@ -120,7 +126,7 @@ class SignUpForm  extends React.Component {
                 autoComplete='off'
               />  
             </div>
-            <div className='field four wide field'>
+            <div className='signupFields'>
               <label style={{color: 'white'}}>Last Name</label>
               <input 
                 value={lastName} 
@@ -130,7 +136,7 @@ class SignUpForm  extends React.Component {
                 autoComplete='off'
               />
             </div>
-            <div className="field four wide field">
+            <div className='signupFields'>
               <label style={{color: 'white'}}>E-mail</label>
               <input 
                 value={email} 
@@ -140,7 +146,7 @@ class SignUpForm  extends React.Component {
                 autoComplete='off'
               />
             </div>
-            <div className="field four wide field">
+            <div className='signupFields'>
               <label style={{color: 'white'}}>Password</label>
               <input 
                 value={password} 
@@ -151,7 +157,7 @@ class SignUpForm  extends React.Component {
                 autoComplete='off'
               />
             </div>
-            <button className="ui button" type="submit" style={{marginLeft: '8%'}}>Submit</button>
+            <button className="signupSubmitBttn">Submit</button>
           </div>
         </form>
       </>

@@ -7,16 +7,46 @@
 h2 {
   text-align-last: center;
 }
-/*Sign up*/
- .signUp {
+                              /*Sign up*/
+
+.signUp {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
     height: 990px;
     background-size: cover;
-    padding-left: 34%;
+    padding-left: 29%;
     padding-top: 13%;
+    color: white;
 }
 
-                        /*Log In*/
+.signupFormContent {
+  margin-left: 18%;
+  width: 100%;
+  text-align: center;
+}
+
+.signupInstructions {
+  padding-right: 37%;
+}
+
+.signupFields {
+  width: 19%;
+  margin-bottom: 2%;
+}
+
+.signupSubmitBttn {
+  margin-right: 81%;
+  padding: 1% 4%;
+  border-radius: 6%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color:#646464;
+  background: #DCDCDC;
+  margin-top: 3%;
+}
+
+
+                             /*Log In*/
 
 .login {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
@@ -147,16 +177,16 @@ h2 {
 
 
 
-.formContent {
-    margin-left: 17%;
-    width: 100%;
-}
+
 
 
 .errorMessage {
-  color: red;
-  font-size: 0.75em;
+  color: #7A0404;
+  font-size: 1.3rem;
   display: relative;
+  background: #FCACAC;
+  padding: 4% 4%;
+  border-radius: 4%;
 }
 
 .menuPlanning {
@@ -355,6 +385,57 @@ background-color: #848484;
   background-color: #141C2C;
 }
 
+
+/*Sign Up Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .signUp {
+    padding-left: 0;
+    height: 100vh;
+    }
+}
+
+@media(max-width: 500px){
+  .signupInstructions {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-right: 7%;
+    padding-left: 10%;
+  }
+}
+
+@media(max-width: 500px){
+  .signupFormContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media(max-width: 500px){
+  .signupFields {
+    padding-top: 7%;
+    width: 45%
+  }
+}
+
+@media(max-width: 500px){
+  .signupSubmitBttn {
+    padding: 2% 11%;
+    margin-left: 81%;
+    margin-top: 11%;
+  }
+}
+
+@media(max-width: 500px){
+  .errorMessageSignup {
+    width: 58%;
+  }
+}
+
 /*Log In Media Queries (mobile)*/
 
 @media(max-width: 500px){
@@ -365,17 +446,24 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .loginTitle {
-   width: 34vw;
-   font-size: 2rem;
-   margin-left: 0;
-   padding-left: 24%;
+    width: 47vw;
+    font-size: 2rem;
+    margin-left: 0;
+    padding-left: 22%;
+    padding-bottom: 6%;
   }
 }
 
 @media(max-width: 500px){
   .loginForm {
     margin-left: 0;
-    margin-top: 56%;
+    margin-top: 40%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginFormLabel {
+    font-size: 1.1rem;
   }
 }
 
@@ -383,6 +471,7 @@ background-color: #848484;
   .loginInputField {
     width: 50vw;
     margin-top: 5%;
+    text-align: center;
   }
 }
 
@@ -394,3 +483,10 @@ background-color: #848484;
   }
 }
 
+@media(max-width: 500px){
+  .loginErrorMessage {
+    margin-left: 16%;
+    margin-top: 11%;
+    padding: 3% 10%;
+  }
+}

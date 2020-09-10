@@ -10,6 +10,10 @@ class LogInForm extends React.Component {
     display: 'none'
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   firebaseSignInUser = () => {
     Firebase
     .auth()
@@ -43,11 +47,11 @@ class LogInForm extends React.Component {
         <form onSubmit={this.handleSubmit} className=" loginForm ui form error">
           <div>
             <h3 className='loginTitle'>Log In</h3>
-            <div className="ui error message loginErrorMessage" style={{display:`${this.state.display}`}}>
+            <div className="ui error message" style={{width:'69%', display:`${this.state.display}`}}>
               <div className='loginErrorCodeMessage'>{this.state.errorCode }</div>
             </div>
             <div className="loginInputField">
-              <label style={{color: 'white'}}>E-mail</label>
+              <label className='loginFormLabel' style={{color: 'white'}}>E-mail</label>
               <input
                 className='loginInput' 
                 value={this.state.email} 
@@ -58,7 +62,7 @@ class LogInForm extends React.Component {
                 />
             </div>
             <div className="loginInputField">
-              <label style={{color: 'white'}}>Password</label>
+              <label className='loginFormLabel' style={{color: 'white'}}>Password</label>
               <input 
                 className='loginInput' 
                 value={this.state.password} 
