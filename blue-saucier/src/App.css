@@ -119,7 +119,6 @@ button {
 }
 
 .homeBttns {
-  margin-right: 15%;
   padding: 2% 5%;
   border: 2px solid white;
   color: white;
@@ -130,6 +129,8 @@ button {
   font-weight: bolder;
   cursor: pointer;
   transition-duration: 0.4s;
+  width: 62%;
+  margin-left: 13%;
 }
 
 .homeBttns:hover {
