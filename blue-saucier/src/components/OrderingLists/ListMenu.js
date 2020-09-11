@@ -7,10 +7,10 @@ import viewListImg from '../../images/menuViewList.jpg';
 
 class ListMenu extends React.Component {
 
-logout = () => {
-  fire.auth().signOut(); 
-  this.props.history.push('/')
-}
+  logout = () => {
+    fire.auth().signOut(); 
+    this.props.history.push('/')
+  }
 
   render(){
     return(
@@ -21,8 +21,8 @@ logout = () => {
         </div>
 
        <div className='listMenu'>
-          <div className='ui two cards ui container' style={{padding: '14% 11%', margin:'0' }}>
-            <Link to ='/create-lists' className='card'>
+          <div className='ui two cards listMenuCardContainer' style={{padding: '14% 11%', margin:'0' }}>
+            <Link to ='/create-lists' className='card ui container'>
               <div className="image">
                 <img
                   src={createListImg}
@@ -31,7 +31,7 @@ logout = () => {
                 <h2> Create List </h2>
               </div>
             </Link>
-            <Link to='/view-lists' className='card'>
+            <Link to='/view-lists' className='card ui container'>
               <div className="image">
                 <img
                   src={viewListImg}

@@ -89,7 +89,6 @@ class EditName extends React.Component {
   }
 
   render(){
-
     return(
       <>
         <ConfirmModal

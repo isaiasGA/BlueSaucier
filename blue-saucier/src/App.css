@@ -92,7 +92,7 @@ button {
 
 
 
-/*Contact, About, Footer, */ 
+                      /*Contact, About, Footer, */ 
 
 .contactLink {
   width: 184px;
@@ -132,7 +132,8 @@ button {
 
 
 
-/*Home*/ 
+                                /*Home*/
+
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
   filter: grayscale(100%);
@@ -171,7 +172,7 @@ button {
   color: black;
 }
 
-/*ManagementMenu*/ 
+                      /*ManagementMenu*/ 
 
 .welcomeDisplay{
   text-align: center;
@@ -212,27 +213,16 @@ button {
   color: #4183c4;
 }
 
-/**/  
+                          /*Lists*/
 
-
-
-
-
-.cards {
-  margin: 8% 2%;
-}
-
-
-
-.createList {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
+.listMenu {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
   height: 899px;
   background-size: cover;
 }
 
-
-.listMenu {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
+.createList {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
   height: 899px;
   background-size: cover;
 }
@@ -246,12 +236,30 @@ button {
   min-height: 100%;
 }
 
-
 .editList{
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/editList.jpg) no-repeat center center fixed;
   height: 100vh;
   background-size: cover;
 }
+
+
+
+
+.cards {
+  margin: 8% 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .ordering-title{
@@ -608,7 +616,14 @@ background-color: #848484;
   }
 }
 
-/* Management Menu Media Queries (mobile)*/
+                      /* Management Menu Media Queries (mobile)*/
+
+@media(max-width: 500px){
+.listMenu {
+    height: 95vh;
+  } 
+}
+
 @media(max-width: 500px){
   .mainMenu {
     height: 100%;
@@ -635,7 +650,7 @@ background-color: #848484;
 }
 
 @media(max-width: 500px){
-  .mainMenuCardContainer {
+  .mainMenuCardContainer, .listMenuCardContainer {
     display: flex;
     flex-direction: column;
   } 
@@ -647,3 +662,4 @@ background-color: #848484;
     margin-left: 19%;
   }
 }
+
