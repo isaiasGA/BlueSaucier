@@ -32,8 +32,8 @@ class MenuHeader extends React.Component {
   render(){
     return (
        <div>
-        <div className='ui inverted segment'>
-          <div className='ui button' onClick={this.props.logout} style={{position: 'absolute', marginLeft: '91%'}}>Log Out</div>
+        <div className='ui inverted segment menuHeaderContent'>
+          <div className='menuHeaderBttn' onClick={this.props.logout}>Log Out</div>
           <div className='welcomeDisplay'>
           <h1>Hello, {this.state.userName.displayName}</h1>
           <h3>Today's date: &ensp;{this.state.date}</h3>

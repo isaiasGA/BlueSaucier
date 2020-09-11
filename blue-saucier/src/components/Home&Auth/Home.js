@@ -1,13 +1,10 @@
-import React, {useEffect} from 'react';
-import {useHistory} from 'react-router-dom';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Footer from './Footer';
 
-function Home(){
-
-  useEffect (() =>{
-    window.scrollTo(0, 0)
-  })
+const Home = () => {
+  window.scrollTo(0, 0)
 
   const history = useHistory();
 
@@ -32,7 +29,7 @@ function Home(){
       </div>
       <Footer  menuOne='Contact' menuTwo='About' linkOne='/contact' linkTwo='/about'/>
       </>
-    )
+    );
   }
 
 export default Home;

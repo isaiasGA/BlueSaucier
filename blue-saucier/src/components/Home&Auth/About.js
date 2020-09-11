@@ -10,18 +10,22 @@ import aboutProfile from '../../images/aboutProfile.jpg';
 
 
 const About = () => {
+  window.scrollTo(0, 0);
+  
   return(
     <div className='about'>
-      <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
-        <Link to ='/' className='active item'>Home</Link>
-        <Link to ='/log-in' className='item'>Log In</Link>
+      <div className='ui inverted menu aboutMenu'>
+        <Link to ='/' className='active item aboutHomeLink'>Home</Link>
+        <Link to ='/log-in' className='item aboutLoginLink'>Log In</Link>
       </div>
       <div className='ui container aboutContent'>
         <h2 className='aboutTitle'>Blue Saucier App</h2>
         <div className='ui segment'>
-          <div className='ui floated header' style={{fontSize: '1.5rem', paddingLeft: '33%'}}>Usefull features to improve your productivity!</div>
+          <div className='ui floated header aboutIntro'>
+            <h3 className='aboutIntro'> Usefull features to improve your productivity!</h3>
+           </div>
           <div className='ui clearing divider'/>
-          <p style={{fontSize: '1.3rem'}}>Blue Saucier is a dynamic and user friendly application. It's primary goal is to assist in basic, yet imporant kitchen management tasks and menu planning. </p>
+          <p  style={{fontSize: '1.3rem', textAlign: 'center' }}>Blue Saucier is a dynamic and user friendly application. It's primary goal is to assist in basic, yet imporant kitchen management tasks and menu planning. </p>
           <div className='aboutPhotoContainer'>
             <img className='aboutPhotos' src={aboutOne} alt='two cooks in a kitchen'/>
             <img className='aboutPhotos'src={aboutTwo} alt='two brown pages'/>
@@ -29,7 +33,7 @@ const About = () => {
           </div>
         </div>
         <div className='appDescription'>
-          <div className='ui card' style={{textAlign: 'center', marginTop:'1.2%'}}>
+          <div className='ui card aboutItemCard'>
             <div className='content'>
               <div className='header'>Item List</div>
               <div className='description' style={{marginLeft:'0'}}>
@@ -44,7 +48,7 @@ const About = () => {
               <img src={aboutList} alt='Several cooking ingredients'/>
             </div>
           </div>
-          <div className='ui card' style={{textAlign: 'center'}}>
+          <div className='ui card aboutMenuPlanningCard'>
           <div className='content'>
             <div className='header'>Menu Planning</div>
             <div className='description' style={{marginLeft:'0'}}>
@@ -59,7 +63,7 @@ const About = () => {
             <img src={menuPlanning} alt='a food menu'/>
           </div>
         </div>
-          <div className='ui card' style={{textAlign: 'center'}}>
+          <div className='ui card'>
             <div className='content'>
               <div className='header'>Google Calendar</div>
               <div className='description' style={{marginLeft:'0'}}>
@@ -72,7 +76,7 @@ const About = () => {
               <img src={googleCalendar} alt='Google calendar'/>
             </div>
           </div>
-          <div className='ui card' style={{textAlign: 'center'}}>
+          <div className='ui card'>
           <div className='content'>
             <div className='header'>Profile Management</div>
             <div className='description' style={{marginLeft:'0'}}>

@@ -22,44 +22,44 @@ class ManagementMenu extends React.Component {
     return (
       <div className='mainMenu'>
         <MenuHeader logout={this.logout}/>
-        <div className="ui four link cards ui container" style={{marginTop: '12%'}}>
-        <Link to="/list-menu" className="card">
-          <div className="image">
-            <img
-              src={menuList}
-              alt="Flower and clipboard"
-            />
-            <h2> Ordering List</h2>
-          </div>
-        </Link>
-        <Link to="menu-planning" className="card">
-          <div className="image">
-            <img
-              src={menuCreate}
-              alt="Menu"
-            />
-            <h2 className="title">Menu Planning</h2>
-          </div>
-        </Link>
-        < button className="card googleButton" onClick={() => calendarData()}>
-          <div className="image">
-            <img
-              src={calendarImg}
-              alt="Google calendar"
-            />
-            <h2>Calendar</h2>
-          </div>
-        </button>
-        <Link to="view-profile" className="card">
-          <div className="image">
-            <img
-              src={menuProfile}
-              alt="restaurant tickets"
-            />
-            <h2 className="title">View Profile</h2>
-          </div>
-        </Link>
-       </div>
+          <div className="ui four link cards ui container mainMenuCardContainer" style={{marginTop: '12%'}}>
+            <Link to="/list-menu" className="card ui container">
+              <div className="image">
+                <img
+                  src={menuList}
+                  alt="Flower and clipboard"
+                />
+                <h2> Ordering List</h2>
+              </div>
+            </Link>
+            <Link to="menu-planning" className="card ui container">
+              <div className="image">
+                <img
+                  src={menuCreate}
+                  alt="Menu"
+                />
+                <h2 className="title">Menu Planning</h2>
+              </div>
+            </Link>
+            < button className="card ui container googleButton " onClick={() => calendarData()}>
+              <div className="image">
+                <img
+                  src={calendarImg}
+                  alt="Google calendar"
+                />
+                <h2>Calendar</h2>
+              </div>
+            </button>
+            <Link to="view-profile" className="card ui container">
+              <div className="image">
+                <img
+                  src={menuProfile}
+                  alt="restaurant tickets"
+                />
+                <h2 className="title">View Profile</h2>
+              </div>
+            </Link>
+         </div>
       </div> 
     );
   }

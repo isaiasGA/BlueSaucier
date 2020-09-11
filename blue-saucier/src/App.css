@@ -94,6 +94,44 @@ button {
 
 /*Contact, About, Footer, */ 
 
+.contactLink {
+  width: 184px;
+}
+
+.aboutMenu {
+  margin: 0;
+  border-radius: 0;
+}
+
+.aboutTitle {
+  padding-left: 0;
+  text-align: center;
+}
+
+.aboutHomeLink {
+  width: 171px;
+}
+
+.aboutLoginLink {
+  width: 143px;
+}
+
+.aboutIntro {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+.appDescription {
+  text-align: center;
+  margin-left: 0;
+}
+.aboutItemCard {
+  margin-top: 1.2%;
+}
+
+
+
+
 /*Home*/ 
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
@@ -104,18 +142,14 @@ button {
 
 .homeContent {
   padding-top: 29%;
-  margin-left: 39%;
+  margin-left: 36%;
 }
 
 .homeTitle {
   font-size: 5.5rem;
   color: white;
   margin-bottom: 6%;
-}
-
-.homeBtttnsContainer {
-  align-content: space-between;
-  width: 100%;
+  margin-left: 5%;
 }
 
 .homeBttns {
@@ -129,8 +163,7 @@ button {
   font-weight: bolder;
   cursor: pointer;
   transition-duration: 0.4s;
-  width: 62%;
-  margin-left: 13%;
+  margin-left: 6%;
 }
 
 .homeBttns:hover {
@@ -138,9 +171,47 @@ button {
   color: black;
 }
 
+/*ManagementMenu*/ 
+
+.welcomeDisplay{
+  text-align: center;
+} 
+
+.menuHeaderBttn {
+  cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background: #e0e1e2 none;
+    color: rgba(0,0,0,.6);
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em .78571429em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    position: absolute;
+    right: 2%;
+}
+
+.mainMenu {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg);
+  background-size: cover;
+  height: 100vh;
+}
 
 
-/**/ 
+.googleButton {
+  color: #4183c4;
+}
+
 /**/  
 
 
@@ -151,11 +222,7 @@ button {
   margin: 8% 2%;
 }
 
-.mainMenu {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg);
-  height: 899px;
-  background-size: cover;
-}
+
 
 .createList {
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
@@ -192,9 +259,7 @@ button {
   text-align: center;
 }
 
-.welcomeDisplay{
-  text-align: center;
-}
+
 
 .logOut{
     position: absolute;
@@ -310,9 +375,7 @@ button {
   min-height: 100%;
 }
 
-.googleButton {
-  color: #4183c4;
-}
+
 
 .editPara {
     font-size: 2rem;
@@ -530,23 +593,57 @@ background-color: #848484;
   .homeTitle {
     font-size: 4.5rem;
     margin-bottom: 13%;
- }
-}
-
-@media(max-width: 500px){
-  .homBttnsContainer {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
   }
 }
 
 @media(max-width: 500px){
   .homeBttns {
+    width: 72%;
     margin-bottom: 16%;
     padding: 4% 3%;
     background: white;
     color: black;
     border: solid 4px grey;
+    margin-left: 12%;
+  }
+}
+
+/* Management Menu Media Queries (mobile)*/
+@media(max-width: 500px){
+  .mainMenu {
+    height: 100%;
+  }
+}
+
+@media(max-width: 500px){
+  .menuHeaderContent {
+    display: flex;
+  }
+}
+
+@media(max-width: 500px){
+  .menuHeaderBttn {
+    padding: 0.785714em 2.5em 0.785714em;
+  }
+}
+
+@media(max-width: 500px){
+ .welcomeDisplay {
+    margin-top: 16%;
+    margin-left: 19%;
+ } 
+}
+
+@media(max-width: 500px){
+  .mainMenuCardContainer {
+    display: flex;
+    flex-direction: column;
+  } 
+ }
+
+ @media(max-width: 500px){
+  .menuCard {
+    width: 63%;
+    margin-left: 19%;
   }
 }
