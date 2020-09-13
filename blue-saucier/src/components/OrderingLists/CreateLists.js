@@ -35,7 +35,6 @@ class CreateLists extends React.Component {
     this.setState({[event.target.name]: event.target.value});
   }
 
-
   handleSubmit = event =>{
     event.preventDefault();
     fire.firestore().collection('restaurantList').add({
@@ -58,15 +57,15 @@ class CreateLists extends React.Component {
           <Link to ='/view-lists' className='item'>My Lists</Link>
          </div>
 
-         <div className='ui container' style={{paddingTop:'11%'}}>
+         <div style={{paddingTop:'11%'}}>
          <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a list of items</h1>
-        <form onSubmit={this.handleSubmit} className="ui form" style={{marginLeft: '35%', width: '100%'}}>
-          <div className="two fields">
-            <div className='three wide field'>
+        <form onSubmit={this.handleSubmit} className="ui form  createListForm" style={{marginLeft: '35%', width: '100%'}}>
+          <div className="two fields ">
+            <div className='createListItem'>
               <label style={{color: 'white'}}>Item</label>
               <input value={this.state.item} onChange={this.handleChanges} type="text" name='item' placeholder="Item" autoComplete='off'/>
             </div>
-            <div className="two wide field">
+            <div className="createListQuant">
               <label style={{color: 'white'}}>Quantity</label>
               <select onChange={this.handleChanges} className='ui fluid dropdown' name='quantity'>
                 <option value=''>Qty</option>
@@ -85,17 +84,17 @@ class CreateLists extends React.Component {
           </div>
 
           <div className="two fields">
-            <div className='two wide field'>
+            <div className='createListUnitPrice'>
               <label style={{color: 'white'}}>Unit Price</label>
               <input value={this.state.unitPrice} onChange={this.handleChanges} type="text" name='unitPrice' placeholder="$" autoComplete='off' data-type='currency'/>
             </div>
-            <div className='two wide field'>
+            <div className='createListTotal'>
               <label style={{color: 'white'}}>Total</label>
               <input value={this.state.total} onChange={this.handleChanges} type="text" name='total' placeholder="$" autoComplete='off'/>
             </div>
           </div>
 
-          <div className="three wide field">
+          <div className="createListCat">
             <label style={{color: 'white'}}>Category</label>
             <select onChange={this.handleChanges} className='ui fluid dropdown' name='category'>
                 <option value=''>Cat</option>
@@ -112,7 +111,7 @@ class CreateLists extends React.Component {
                 <option value='other'>Other</option>
               </select>
           </div>
-          <button className="ui button" type="submit" style={{marginLeft:'6%'}}>Submit</button>
+          <button className="createListBttn" type="submit" style={{marginLeft:'6%'}}>Submit</button>
         </form>
       </div>
       </div>
