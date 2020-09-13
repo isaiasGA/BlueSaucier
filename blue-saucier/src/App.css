@@ -174,7 +174,7 @@ button {
   text-align: center;
 } 
 
-.menuHeaderBttn, .createListBttn {
+.menuHeaderBttn, .createListBttn, .editSubmitBttn {
   cursor: pointer;
     display: inline-block;
     min-height: 1em;
@@ -261,6 +261,44 @@ button {
   height: 100vh;
   background-size: cover;
 }
+
+.editListTitle {
+  color: white;
+  text-align: center;
+}
+
+.editForm {
+  margin-left: 40%;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.editItem, .editTotal {
+  margin-right: 7%;
+}
+
+.editUnitP {
+  width: 8%;
+  margin-right: 4%;
+}
+
+.editTotal {
+  width: 10%;
+}
+
+.editCat {
+  width: 12%;
+  margin-left: -.6%;
+  margin-bottom: 4%;
+}
+
+.editSubmitBttn {
+    margin-left: 7%;
+    background: #1C648C;
+    color: white;
+}
+
+
 
 
 
@@ -499,7 +537,7 @@ background-color: #848484;
 }
 
 
-/*Sign Up Media Queries (mobile)*/
+                    /*Sign Up Media Queries (mobile)*/
 
 @media(max-width: 500px){
   .signUp {
@@ -549,7 +587,7 @@ background-color: #848484;
   }
 }
 
-/*Log In Media Queries (mobile)*/
+                        /*Log In Media Queries (mobile)*/
 
 @media(max-width: 500px){
   .login {
@@ -654,6 +692,7 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .menuHeaderBttn {
+    right: 0;
     padding: 0.785714em 2.5em 0.785714em;
   }
 }
@@ -742,5 +781,29 @@ background-color: #848484;
 
   }
 }
- 
+
+@media(max-width: 500px){
+  .editForm {
+    margin-left: 0;
+    padding-left: 15%;
+  }
+}
+
+@media(max-width: 500px){
+  .editUnitP, .editTotal {
+    width: 21%;
+  }
+}
+
+@media(max-width: 500px){
+  .editCat {
+    width: 37%;
+  }
+}
+
+@media(max-width: 500px){
+  .editFields {
+    margin-bottom: 5%;
+  }
+}
  

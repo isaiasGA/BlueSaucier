@@ -69,14 +69,14 @@ class EditLists extends React.Component {
     return(
       <div className='editList'>
         <div className='ui container' style={{paddingTop:'11%'}}>
-        <h2 style={{color: 'white', textAlign: 'center'}}>Edit your list</h2>
-        <form className='ui form' onSubmit={this.onSubmit}  style={{marginLeft: '35%', width: '100%'}}>
-          <div className='two fields'>
-            <div className='three wide field'>
+        <h2 className='editListTitle'>Edit your list</h2>
+        <form className='ui form editForm' onSubmit={this.onSubmit} >
+          <div className='two fields editFields'>
+            <div className='editItem'>
               <label style={{color: 'white'}}>Item</label>
               <input type='text' name='item' value={this.state.item} onChange={this.onChange} placeholder='item' autoComplete='off'/>
             </div>
-            <div className='two wide field'>
+            <div className='editQuant'>
             <label style={{color: 'white'}}>Quantity</label>
               <select onChange={this.onChange} className='ui fluid dropdown' name='quantity'>
                 <option value=''>Qty</option>
@@ -93,18 +93,18 @@ class EditLists extends React.Component {
               </select>
             </div>
           </div>
-          <div className='two fields'>
-            <div className='two wide field'>
+          <div className='two fields editFields'>
+            <div className='editUnitP'>
               <label style={{color: 'white'}}>Unit Price</label>
                <td></td>
               <input value={this.state.unitPrice} onChange={this.onChange} type="text" name='unitPrice' placeholder="$" autoComplete='off' data-type='currency'/>
             </div>
-            <div className='two wide field'>
+            <div className='editTotal'>
               <label style={{color: 'white'}}>Total</label>
               <input value={this.state.total} onChange={this.onChange} type="text" name='total' placeholder="$" autoComplete='off'/>
             </div>
           </div>
-          <div className="three wide field">
+          <div className="editCat">
             <label style={{color: 'white'}}>Category</label>
             <select onChange={this.onChange} className='ui fluid dropdown' name='category'>
                   <option value=''>Cat</option>
@@ -121,7 +121,7 @@ class EditLists extends React.Component {
                 <option value='other'>Other</option>
               </select>
           </div>
-          <button type='submit' className='ui button blue'>Submit Changes</button>
+          <button type='submit' className='editSubmitBttn'>Submit Changes</button>
         </form>
       </div>
       </div>  
