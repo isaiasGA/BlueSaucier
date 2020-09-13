@@ -64,7 +64,7 @@ class ViewLists extends React.Component {
           <Link to ='/main-menu' className='active item'>Main Menu</Link>
           <Link to ='/create-lists' className='item'>Create List</Link>
         </div>
-        <h2 className='ordering-title'>My Ordering Lists</h2>
+        <h2 className='viewListTitle'>My Ordering Lists</h2>
           {item}
      </div>
      

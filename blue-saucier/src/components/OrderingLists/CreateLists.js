@@ -59,7 +59,7 @@ class CreateLists extends React.Component {
 
          <div style={{paddingTop:'11%'}}>
          <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a list of items</h1>
-        <form onSubmit={this.handleSubmit} className="ui form  createListForm" style={{marginLeft: '35%', width: '100%'}}>
+        <form onSubmit={this.handleSubmit} className="ui form  createListForm">
           <div className="two fields ">
             <div className='createListItem'>
               <label style={{color: 'white'}}>Item</label>

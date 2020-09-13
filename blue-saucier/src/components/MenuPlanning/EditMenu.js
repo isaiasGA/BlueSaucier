@@ -45,7 +45,7 @@ class EditMenu extends React.Component {
   getDishInputs(){
       return this.state.dishValues.map((elem, i) => (
         <div key={i}>
-          <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
+          <div className="five wide field editMenuCat" style={{ marginLeft: '21%'}}>
             <label>Category</label>
             <select onChange={this.onChangeNewDish.bind(this, i)} className='ui fluid dropdown' name='category'>
               <option value= {elem.category}>Cat</option>
@@ -58,16 +58,16 @@ class EditMenu extends React.Component {
             </select>
           </div>  
           <div className='two wide fields'>
-            <div  className='seven wide field'>
+            <div  className='editMenuDish'>
               <label>Dish</label>
               <input value={elem.dish || ""} onChange={this.onChangeNewDish.bind(this, i)} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
             </div>
-            <div className='four wide field'>
+            <div className='editMenuPrice'>
               <label>Price</label>
               <input value={elem.price || ""} onChange={this.onChangeNewDish.bind(this, i)} type="text" name='price' placeholder="$" autoComplete='off'/>
             </div>
           </div>  
-          <div  className='twelve wide field'>
+          <div  className='twelve wide field editMenuDesc'>
             <label>Description</label>
             <textarea rows='2' value={elem.description || ""} onChange={this.onChangeNewDish.bind(this, i)} type="text" name='description' placeholder="Description" autoComplete='off'/>
           </div>
@@ -128,12 +128,12 @@ class EditMenu extends React.Component {
           <Link to ='/main-menu' className='active item'>Main Menu</Link>
           <Link to ='/view-menu' className='item'>View Menu</Link>
         </div>
-        <div className='ui container' style={{paddingTop:'2%', width: '637px'}}>
-         <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a Menu</h1>
-         <form onSubmit={this.onSubmit} className="ui form" style={{textAlign: 'center', width: '100%'}}>
+        <div className='ui container editMenuContainer' style={{ width: '637px'}}>
+         <h1 className='editMenuInstructions' style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a Menu</h1>
+         <form onSubmit={this.onSubmit} className="ui form editMenuForm">
           <div className='menuBackground'>
             <h3 className='createMenuTitle'>Menu</h3>
-            <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
+            <div className="five wide field editMenuCatTwo" style={{ marginLeft: '21%'}}>
               <label>Category</label>
               <select onChange={this.onChange} className='ui fluid dropdown' name='category'>
                 <option value=''>Cat</option>
@@ -146,11 +146,11 @@ class EditMenu extends React.Component {
               </select>
             </div>  
             <div className='two wide fields'>
-              <div className='seven wide field'>
+              <div className='editMenuDish'>
                 <label>Dish</label>
                 <input value={this.state.dish} onChange={this.onChange} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='editMenuPrice'>
               <label>Price</label>
               <input value={this.state.price} onChange={this.onChange} type="text" name='price' placeholder="$" autoComplete='off'/>
             </div>

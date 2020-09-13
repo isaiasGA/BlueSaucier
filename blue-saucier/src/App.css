@@ -127,6 +127,59 @@ button {
   margin-top: 1.2%;
 }
 
+.about{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/about.jpg)  no-repeat center center fixed;
+  background-size: cover;
+}
+
+.aboutTitle{
+    padding-top: 3%;
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 4%;
+}
+
+.appDescription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.aboutPhotoContainer{
+    display: flex;
+    margin-right: 4%;
+}
+
+.aboutPhotos {
+    width: 34%;
+    margin-right: 2%;
+    border-radius: 8%;
+}
+
+.aboutPhotos:last-child {
+  padding-right: 1.8%;
+}
+
+.contactCards{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 34%;
+  color:white
+}
+
+.contact{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/contact.jpg)  no-repeat center center fixed;
+  background-size: cover;
+  height: 899px;
+}
+
+.contactContent {
+  background-color: #141C2C;
+}
+
 
                                 /*Home*/
 
@@ -176,25 +229,26 @@ button {
 
 .menuHeaderBttn, .createListBttn, .editSubmitBttn {
   cursor: pointer;
-    display: inline-block;
-    min-height: 1em;
-    outline: 0;
-    border: none;
-    vertical-align: baseline;
-    background: #e0e1e2 none;
-    color: rgba(0,0,0,.6);
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    margin: 0 .25em 0 0;
-    padding: .78571429em 1.5em .78571429em;
-    text-transform: none;
-    text-shadow: none;
-    font-weight: 700;
-    line-height: 1em;
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    border-radius: .28571429rem;
-    position: absolute;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: rgba(0,0,0,.6);
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  margin: 0 .25em 0 0;
+  padding: .78571429em 1.5em .78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .28571429rem;
+  position: absolute;
 }
 
 .mainMenu {
@@ -222,6 +276,11 @@ button {
   background-size: cover;
 }
 
+.createListForm {
+  margin-left:  35%;
+  width: 100%;
+}
+
 .createListItem {
   margin-right: 5%;
 }
@@ -244,6 +303,11 @@ button {
     margin-top: 4%;
     margin-left: 5%;
     width: 13%;
+}
+
+.viewListTitle{
+  color: white;
+  text-align: center;
 }
 
 .view-list {
@@ -299,52 +363,7 @@ button {
 }
 
 
-
-
-
-
-.cards {
-  margin: 8% 2%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ordering-title{
-  color: white;
-  text-align: center;
-}
-
-
-
-.logOut{
-    position: absolute;
-    margin-left: 91%;
-}
-
-
-
-
-
-
-.errorMessage {
-  color: #7A0404;
-  font-size: 1.3rem;
-  display: relative;
-  background: #FCACAC;
-  padding: 4% 4%;
-  border-radius: 4%;
-}
+                                        /*Menu Planning*/
 
 .menuPlanning {
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0) ), url(./images/menu.jpg) no-repeat center center fixed;
@@ -386,50 +405,87 @@ button {
   min-height: 100%;
 }
 
-.createMenuTitle {
-    font-size: 3.3rem;
-    margin-right: 22%;
-    padding-top: 3%;
+.createMenuContainer{
+  padding-top: 2%;
 }
 
-.category {
+.createMenuInstructions {
+  color: white;
+  text-align: center;
+}
+
+.createMenuForm {
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.createMenuTitle, .viewMenuTitle {
+  margin-top: 0;
+  font-size: 3.3rem;
+  margin-right: 22%;
+  padding-top: 3%;
+}
+
+.createMenuCategory {
+  padding-top: 3%;
+}
+
+.createMenuDish, .editMenuDish {
+  width: 52%;
+  margin-right: 9%;
+  margin-left: 2%;
+}
+
+.createMenuPrice, .editMenuPrice {
+  width: 23%;
+}
+
+.viewMenuTitle {
+  margin-left: 31%;
+}
+
+.viewMenuCategory {
   font-size: 2rem;
   margin-left: 30%;
   margin-top: 8%;
+  margin-bottom: 9%;
 }
 
-.categoryTwo {
-  font-size: 2rem;
-  margin-left: 30%;
-  margin-top: 20%;
-}
-
-.dish-and-price {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.5rem;
-    margin-right: 24%;
-}
-
-.dish {
+.viewMenuDish {
   margin-left: 18%;
 }
 
-.description {
-    font-size: 1.2rem;
-    margin-bottom: 14%;
-    margin-left: 20%;
+.viewMenuDescription {
+  font-size: 1.2rem;
+  margin-bottom: 14%;
+  margin-left: 20%;
 }
 
-.descriptionTwo {
+.viewMenuSectionTwo {
+  margin-bottom: 16%;
+  margin-right: 17%;
+}
+
+.viewMenuSecTwoCat {
+  font-size: 2rem;
+  margin-left: 36%;
+  margin-top: 20%;
+  margin-bottom: 9%;
+}
+
+.viewMenuSecTwoDish {
+  margin-left: 23%;
+}
+
+.viewMenuCatTwoDesc {
   font-size: 1.2rem;
   margin-bottom: 14%;
   margin-left: 21%;
 }
 
-.extraDishes {
-    margin-bottom: 16%;
-    margin-right: 17%;
+.viewMenuBttns {
+  margin-bottom: 8%;
 }
 
 .editMenu{
@@ -440,6 +496,31 @@ button {
   min-width: 100%;
   min-height: 100%;
 }
+
+.editMenuCat {
+  padding-top: 3%;
+}
+
+.editMenuContainer {
+  padding-top: 2%;
+}
+
+.editMenuForm {
+  text-align: center;
+  width: 100%;
+}
+
+.editMenuDesc {
+  padding-bottom: 12%;
+}
+
+
+
+
+
+
+
+
 
 .editPara {
     font-size: 2rem;
@@ -483,58 +564,6 @@ background-color: #848484;
     padding-top: 3%;
 }
 
-.about{
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/about.jpg)  no-repeat center center fixed;
-  background-size: cover;
-}
-
-.aboutTitle{
-    padding-top: 3%;
-    color: white;
-    font-size: 3rem;
-    padding-bottom: 4%;
-}
-
-.appDescription {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-bottom: 5%;
-}
-
-.aboutPhotoContainer{
-    display: flex;
-    margin-right: 4%;
-}
-
-.aboutPhotos {
-    width: 34%;
-    margin-right: 2%;
-    border-radius: 8%;
-}
-
-.aboutPhotos:last-child {
-  padding-right: 1.8%;
-}
-
-.contactCards{
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-top: 34%;
-  color:white
-}
-
-.contact{
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/contact.jpg)  no-repeat center center fixed;
-  background-size: cover;
-  height: 899px;
-}
-
-.contactContent {
-  background-color: #141C2C;
-}
 
 
                     /*Sign Up Media Queries (mobile)*/
@@ -636,9 +665,7 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .loginErrorMessage {
-    margin-left: 16%;
-    margin-top: 11%;
-    padding: 3% 10%;
+   width:66%;
   }
 }
 
@@ -729,6 +756,7 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .createListForm {
+    margin-left: 0;
     padding: 14%;
     padding-left: 28%;
     width: 100%;
@@ -774,10 +802,9 @@ background-color: #848484;
 @media(max-width: 500px){
   .createListBttn {
     margin-top: 16%;
-    width: 66%;
+    width: 46%;
     padding-top: 4%;
-    margin-right: 17%;
-    margin-left: -7%;
+    margin-right: 32px;
 
   }
 }
@@ -807,3 +834,55 @@ background-color: #848484;
   }
 }
  
+
+/* Menu Planning Que*/
+
+@media(max-width: 500px){
+  .menuPlanning {
+    height: 95vh;
+  }
+}
+
+@media(max-width: 500px){
+  .menuBackground {
+    padding-left: 11%;
+  }
+}
+
+@media(max-width: 500px){
+  .menuPlanningCardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 500px){
+  .createMenuInstructions, .editMenuInstructions {
+    font-size: 1.5rem;
+    margin-bottom: 8%;
+    padding-top: 10%;
+  }
+}
+
+@media(max-width: 500px){
+  .createMenuTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media(max-width: 500px){
+  .viewMenuContainer {
+    width: 107vw;
+    margin-top: 10%;
+    margin-bottom: 12%;
+  }
+}
+
+
+
+
+
+
+
+
+

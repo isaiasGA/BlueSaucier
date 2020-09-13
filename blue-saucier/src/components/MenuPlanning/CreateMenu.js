@@ -54,11 +54,11 @@ class CreateMenu extends React.Component {
           </select>
         </div>  
         <div className='two wide fields'>
-          <div  className='seven wide field'>
+          <div  className='createMenuDish'>
             <label>Dish</label>
             <input value={elem.dish || ""} onChange={this.handleChangesNewDish.bind(this, i)} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
           </div>
-          <div className='four wide field'>
+          <div className='createMenuPrice'>
             <label>Price</label>
             <input value={elem.price || ""} onChange={this.handleChangesNewDish.bind(this, i)} type="text" name='price' placeholder="$" autoComplete='off'/>
           </div>
@@ -123,12 +123,12 @@ class CreateMenu extends React.Component {
           <Link to ='/view-menu' className='item'>View Menu</Link>
          </div>
 
-         <div className='ui container' style={{paddingTop:'2%', width: '637px'}}>
-         <h1 style={{color: 'white', textAlign: 'center'}}>Fill out the following form to create a Menu</h1>
-        <form onSubmit={this.handleSubmit} className="ui form" style={{textAlign: 'center', width: '100%'}}>
+         <div className='ui container createMenuContainer' style={{width: '637px'}}>
+         <h1 className='createMenuInstructions'>Fill out the following form to create a Menu</h1>
+        <form onSubmit={this.handleSubmit} className="ui form createMenuForm">
           <div className='menuBackground'>
             <h3 className='createMenuTitle'>Menu</h3>
-            <div className="five wide field" style={{paddingTop: '3%', marginLeft: '21%'}}>
+            <div className="five wide field createMenuCategory" style={{marginLeft: '21%'}}>
               <label>Category</label>
               <select onChange={this.handleChanges} className='ui fluid dropdown' name='category'>
                 <option value=''>Cat</option>
@@ -141,11 +141,11 @@ class CreateMenu extends React.Component {
               </select>
             </div>  
             <div className='two wide fields'>
-              <div className='seven wide field'>
+              <div className='createMenuDish'>
                 <label>Dish</label>
                 <input value={this.state.dish} onChange={this.handleChanges} type="text" name='dish' placeholder="Dish" autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='createMenuPrice'>
                 <label>Price</label>
                 <input value={this.state.price} onChange={this.handleChanges} type="text" name='price' placeholder="$" autoComplete='off'/>
               </div>
@@ -163,7 +163,7 @@ class CreateMenu extends React.Component {
               onClick={this.addNewDish.bind(this)}
             />
           </div>
-          <button className="big ui black button" type="submit" style={{margin:'6%'}}>Create</button>
+          <button className="big ui white button" type="submit" style={{margin:'6%'}}>Create</button>
         </form>
        </div>
       </div>

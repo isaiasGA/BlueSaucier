@@ -47,7 +47,7 @@ class LogInForm extends React.Component {
         <form onSubmit={this.handleSubmit} className=" loginForm ui form error">
           <div>
             <h3 className='loginTitle'>Log In</h3>
-            <div className="ui error message" style={{width:'69%', display:`${this.state.display}`}}>
+            <div className="ui error message loginErrorMessage" style={{ display:`${this.state.display}`}}>
               <div className='loginErrorCodeMessage'>{this.state.errorCode }</div>
             </div>
             <div className="loginInputField">
