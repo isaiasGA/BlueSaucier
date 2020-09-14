@@ -2,7 +2,7 @@ import React  from 'react';
 import { Link} from 'react-router-dom';
 import fire from '../../config/firebase';
 
-class ManageProfile extends React.Component {
+class ViewProfile extends React.Component {
   state = {
     email: '',
     displayName: '',
@@ -43,4 +43,4 @@ class ManageProfile extends React.Component {
   }
 }
 
-export default ManageProfile;
+export default ViewProfile;

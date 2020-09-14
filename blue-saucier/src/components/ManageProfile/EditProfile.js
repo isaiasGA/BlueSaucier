@@ -21,7 +21,7 @@ const initialState = {
 
 }
 
-class EditName extends React.Component {
+class EditProfile extends React.Component {
      state = initialState;
 
   handleChanges = (event) => {
@@ -77,9 +77,9 @@ class EditName extends React.Component {
             })
         } 
 
-      if((newFirstName && newLastName) || (!passwordError && !emailError && !authError)){
+       if((newFirstName && newLastName) || (!passwordError && !emailError && !authError)){
         this.setState({ modalToggle: true })
-      }
+        }
       })
   }
 
@@ -104,36 +104,40 @@ class EditName extends React.Component {
 
           <div className='editProfileContent'>
           <h2 className='editProfileInstructions'>Please fill out the fields that you wish to change. If no change is needed for a specific field, leave the field empty.</h2>
-            <div className="ui error message" style={{width:'25%', marginLeft: '37%',display:`${this.state.display}`}}>
+            <div className='editProfileErrorMessage'>
+              <div className="ui error message editProfileErrorMessage" style={{width:'25%', marginLeft: '37%',display:`${this.state.display}`}}>
+            </div>
               <div className='header'>{this.state.passwordError}</div>
                                 <br></br>
               <div className='header'>{this.state.emailError}</div>
                                 <br></br>
               <div className='header'>{this.state.authError}</div>
             </div>
-            <form onSubmit={this.onSubmit} className='ui form' style={{marginLeft: '42%', widht:'100%'}}>
-              <div className='four wide field'>
+            <form onSubmit={this.onSubmit} className='ui form ui container' style={{marginLeft: '42%', widht:'100%'}}>
+              <div className='editProfileInput'>
                 <label style={{color: 'white'}}>First Name:</label>
                 <input value={this.state.newFirstName} onChange={this.handleChanges} type='text' name='newFirstName' placeholder='First Name' autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='editProfileInput'>
                 <label style={{color: 'white'}}>Last Name:</label>
                 <input value={this.state.newLastName} onChange={this.handleChanges} type='text' name='newLastName' placeholder='Last Name' autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='editProfileInput'>
                 <h4>*Please provie your current password in order to change to a new password and/or a new email.</h4>
                 <label style={{color: 'white'}}>Current Password:</label>
                 <input value={this.state.currentPassword} onChange={this.handleChanges} type='password' name='currentPassword' placeholder='Current Password' autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='editProfileInput'>
                 <label style={{color: 'white'}}>New Password</label>
                 <input value={this.state.newPassword} onChange={this.handleChanges} type='password' name='newPassword' placeholder='New Password' autoComplete='off'/>
               </div>
-              <div className='four wide field'>
+              <div className='editProfileInput'>
                 <label style={{color: 'white'}}>New Email:</label>
                 <input value={this.state.newEmail} onChange={this.handleChanges} type='email' name='newEmail' placeholder='New Email' autoComplete='off'/>
               </div>
-              <button className='ui black button' style={{marginRight: '76%'}}>Submit</button>
+              <div className='bttn container'>
+               <button className='ui black button' style={{marginRight: '16%'}}>Submit</button>
+              </div>
             </form>
           </div>
         </div>
@@ -144,4 +148,4 @@ class EditName extends React.Component {
 
 }
 
-export default EditName;
+export default EditProfile;

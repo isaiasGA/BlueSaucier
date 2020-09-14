@@ -251,6 +251,10 @@ button {
   position: absolute;
 }
 
+.menuHeaderBttn {
+  right: 0;
+}
+
 .mainMenu {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg);
   background-size: cover;
@@ -560,7 +564,13 @@ background-color: #848484;
 
 .editProfileInstructions{
     margin-right: 9%;
-    padding-top: 3%;
+    padding-top: 2%;
+}
+
+.editProfileInput {
+  width: 20%;
+  margin-bottom: 3%; 
+  margin-left: 32%;
 }
 
 
@@ -718,7 +728,6 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .menuHeaderBttn {
-    right: 0;
     padding: 0.785714em 2.5em 0.785714em;
   }
 }
@@ -894,12 +903,33 @@ background-color: #848484;
 }
 
 @media(max-width: 500px){
-  
+  .editProfileInstructions{
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
 }
 
 @media(max-width: 500px){
-  
+  .editProfileInput {
+    width: 55%;
+    margin-left: 22%;
+  }
 }
+
+@media(max-width: 500px){
+  .bttnContainer {
+    margin-right: 7%;
+  }
+}
+
+@media(max-width: 500px){
+  .editProfileErrorMessage {
+    width: 55%;
+    margin-left: 20%;
+    padding-bottom: 3%;
+  }
+}
+
 
 
 
