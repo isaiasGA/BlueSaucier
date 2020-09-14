@@ -1,0 +1,939 @@
+                                    /*General Styles*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+h2 {
+  text-align-last: center;
+}
+button {
+  font-family: 'Raleway', sans-serif;
+}
+                              /*Sign up*/
+
+.signUp {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
+    height: 990px;
+    background-size: cover;
+    padding-left: 29%;
+    padding-top: 13%;
+    color: white;
+}
+
+.signupFormContent {
+  margin-left: 18%;
+  width: 100%;
+  text-align: center;
+}
+
+.signupInstructions {
+  padding-right: 37%;
+}
+
+.signupFields {
+  width: 19%;
+  margin-bottom: 2%;
+}
+
+.signupSubmitBttn {
+  margin-right: 81%;
+  padding: 1% 4%;
+  border-radius: 6%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color:#646464;
+  background: #DCDCDC;
+  margin-top: 3%;
+}
+
+
+                             /*Log In*/
+
+.login {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+  padding-left: 34%;
+  padding-top: 14%;
+}
+.loginTitle {
+    margin-left: 7%;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.loginForm {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 15%;
+}
+
+.loginInputField {
+  width: 23%;
+  margin-top: 3%;
+}
+
+.loginErrorMessage {
+  width: 25%
+}
+
+.loginSubmitBttn {
+    margin-left: 5%;
+    margin-top: 3%;
+    padding: 1% 4%;
+    border-radius: 6%;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    color:#646464;
+    background: #DCDCDC;
+}
+
+
+                      /*Contact, About, Footer, */ 
+
+.contactLink {
+  width: 184px;
+}
+
+.aboutMenu {
+  margin: 0;
+  border-radius: 0;
+}
+
+.aboutTitle {
+  padding-left: 0;
+  text-align: center;
+}
+
+.aboutHomeLink {
+  width: 171px;
+}
+
+.aboutLoginLink {
+  width: 143px;
+}
+
+.aboutIntro {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+.appDescription {
+  text-align: center;
+  margin-left: 0;
+}
+.aboutItemCard {
+  margin-top: 1.2%;
+}
+
+.about{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/about.jpg)  no-repeat center center fixed;
+  background-size: cover;
+}
+
+.aboutTitle{
+    padding-top: 3%;
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 4%;
+}
+
+.appDescription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.aboutPhotoContainer{
+    display: flex;
+    margin-right: 4%;
+}
+
+.aboutPhotos {
+    width: 34%;
+    margin-right: 2%;
+    border-radius: 8%;
+}
+
+.aboutPhotos:last-child {
+  padding-right: 1.8%;
+}
+
+.contactCards{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 34%;
+  color:white
+}
+
+.contact{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/contact.jpg)  no-repeat center center fixed;
+  background-size: cover;
+  height: 899px;
+}
+
+.contactContent {
+  background-color: #141C2C;
+}
+
+
+                                /*Home*/
+
+.home {
+  background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
+  filter: grayscale(100%);
+  height: 899px;
+  background-size: cover;
+}
+
+.homeContent {
+  padding-top: 29%;
+  margin-left: 36%;
+}
+
+.homeTitle {
+  font-size: 5.5rem;
+  color: white;
+  margin-bottom: 6%;
+  margin-left: 5%;
+}
+
+.homeBttns {
+  padding: 2% 5%;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-left: 6%;
+}
+
+.homeBttns:hover {
+  background-color: white;
+  color: black;
+}
+
+                      /*ManagementMenu*/ 
+
+.welcomeDisplay{
+  text-align: center;
+} 
+
+.menuHeaderBttn, .createListBttn, .editSubmitBttn {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: rgba(0,0,0,.6);
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  margin: 0 .25em 0 0;
+  padding: .78571429em 1.5em .78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .28571429rem;
+  position: absolute;
+}
+
+.menuHeaderBttn {
+  right: 0;
+}
+
+.mainMenu {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/mainMenu.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+
+.googleButton {
+  color: #4183c4;
+}
+
+                          /*Lists*/
+
+.listMenu {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+.createList {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
+  height: 899px;
+  background-size: cover;
+}
+
+.createListForm {
+  margin-left:  35%;
+  width: 100%;
+}
+
+.createListItem {
+  margin-right: 5%;
+}
+
+.createListUnitPrice {
+  width: 8%;
+  margin-right: 6%;
+}
+
+.createListTotal {
+  width: 9%;
+}
+
+.createListCat {
+  width: 11%;
+  margin-left: -0.5%;
+}
+
+.createListBttn {
+    margin-top: 4%;
+    margin-left: 5%;
+    width: 13%;
+}
+
+.viewListTitle{
+  color: white;
+  text-align: center;
+}
+
+.view-list {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/viewList.jpg);
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.editList{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/editList.jpg) no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+}
+
+.editListTitle {
+  color: white;
+  text-align: center;
+}
+
+.editForm {
+  margin-left: 40%;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.editItem, .editTotal {
+  margin-right: 7%;
+}
+
+.editUnitP {
+  width: 8%;
+  margin-right: 4%;
+}
+
+.editTotal {
+  width: 10%;
+}
+
+.editCat {
+  width: 12%;
+  margin-left: -.6%;
+  margin-bottom: 4%;
+}
+
+.editSubmitBttn {
+    margin-left: 7%;
+    background: #1C648C;
+    color: white;
+}
+
+
+                                        /*Menu Planning*/
+
+.menuPlanning {
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0) ), url(./images/menu.jpg) no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+
+.menuBackground{
+  background: url(./images/menuBackground.jpg) no-repeat center center fixed;
+  height: auto;
+  padding-left: 22%;
+  border-radius: 3%;
+}
+
+.menuBackground2{
+  background: url(./images/menuBackground.jpg) no-repeat center center fixed;
+  height: auto;
+  padding-left: 11%;
+  border-radius: 3%;
+}
+
+
+.createMenu{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/CreateMenu.jpg) no-repeat center center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.viewMenu{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/viewMenu.jpg)  no-repeat center center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.createMenuContainer{
+  padding-top: 2%;
+}
+
+.createMenuInstructions {
+  color: white;
+  text-align: center;
+}
+
+.createMenuForm {
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.createMenuTitle, .viewMenuTitle {
+  margin-top: 0;
+  font-size: 3.3rem;
+  margin-right: 22%;
+  padding-top: 3%;
+}
+
+.createMenuCategory {
+  padding-top: 3%;
+}
+
+.createMenuDish, .editMenuDish {
+  width: 52%;
+  margin-right: 9%;
+  margin-left: 2%;
+}
+
+.createMenuPrice, .editMenuPrice {
+  width: 23%;
+}
+
+.viewMenuTitle {
+  margin-left: 31%;
+}
+
+.viewMenuCategory {
+  font-size: 2rem;
+  margin-left: 30%;
+  margin-top: 8%;
+  margin-bottom: 9%;
+}
+
+.viewMenuDish {
+  margin-left: 18%;
+}
+
+.viewMenuDescription {
+  font-size: 1.2rem;
+  margin-bottom: 14%;
+  margin-left: 20%;
+}
+
+.viewMenuSectionTwo {
+  margin-bottom: 16%;
+  margin-right: 17%;
+}
+
+.viewMenuSecTwoCat {
+  font-size: 2rem;
+  margin-left: 36%;
+  margin-top: 20%;
+  margin-bottom: 9%;
+}
+
+.viewMenuSecTwoDish {
+  margin-left: 23%;
+}
+
+.viewMenuCatTwoDesc {
+  font-size: 1.2rem;
+  margin-bottom: 14%;
+  margin-left: 21%;
+}
+
+.viewMenuBttns {
+  margin-bottom: 8%;
+}
+
+.editMenu{
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.1) ), url(./images/editMenu.jpg)  no-repeat center center fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.editMenuCat {
+  padding-top: 3%;
+}
+
+.editMenuContainer {
+  padding-top: 2%;
+}
+
+.editMenuForm {
+  text-align: center;
+  width: 100%;
+}
+
+.editMenuDesc {
+  padding-bottom: 12%;
+}
+
+/*  Profile*/
+
+.profileContainer {
+
+  height: auto;
+}
+
+.viewProfileInfo {
+    font-size: 2rem;
+    width: 100%;
+    margin-left: 16%;
+}
+
+.viewProfileBttn {
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+.viewProfileContent {
+  padding-top: 17%;
+}
+
+.viewProfile{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/manageProfile.jpg)  no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+.viewProfileImg {
+background-color: #848484;
+}
+
+.editProfile{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/profileEdit.jpg)  no-repeat center center fixed;
+  height: 899px;
+  background-size: cover;
+}
+
+
+.editProfileContent {
+    text-align: center;
+    color: white;
+}
+
+.editProfileInstructions{
+    margin-right: 9%;
+    padding-top: 2%;
+}
+
+.editProfileInput {
+  width: 20%;
+  margin-bottom: 3%; 
+  margin-left: 32%;
+}
+
+
+
+                    /*Sign Up Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .signUp {
+    padding-left: 0;
+    height: 100vh;
+    }
+}
+
+@media(max-width: 500px){
+  .signupInstructions {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-right: 7%;
+    padding-left: 10%;
+  }
+}
+
+@media(max-width: 500px){
+  .signupFormContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media(max-width: 500px){
+  .signupFields {
+    padding-top: 7%;
+    width: 45%
+  }
+}
+
+@media(max-width: 500px){
+  .signupSubmitBttn {
+    padding: 2% 11%;
+    margin-left: 81%;
+    margin-top: 11%;
+  }
+}
+
+@media(max-width: 500px){
+  .errorMessageSignup {
+    width: 58%;
+  }
+}
+
+                        /*Log In Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .login {
+    padding-left: 26%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginTitle {
+    width: 47vw;
+    font-size: 2rem;
+    margin-left: 0;
+    padding-left: 22%;
+    padding-bottom: 6%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginForm {
+    margin-left: 0;
+    margin-top: 40%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginFormLabel {
+    font-size: 1.1rem;
+  }
+}
+
+@media(max-width: 500px){
+  .loginInputField {
+    width: 50vw;
+    margin-top: 5%;
+    text-align: center;
+  }
+}
+
+@media(max-width: 500px){
+  .loginSubmitBttn {
+    margin-left: 16%;
+    margin-top: 11%;
+    padding: 3% 10%;
+  }
+}
+
+@media(max-width: 500px){
+  .loginErrorMessage {
+   width:66%;
+  }
+}
+
+/* Home Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .homeContent {
+    margin-left: 7%;
+    padding-top: 85%;
+  }
+}
+
+@media(max-width: 500px){
+  .homeTitle {
+    font-size: 4.5rem;
+    margin-bottom: 13%;
+  }
+}
+
+@media(max-width: 500px){
+  .homeBttns {
+    width: 72%;
+    margin-bottom: 16%;
+    padding: 4% 3%;
+    background: white;
+    color: black;
+    border: solid 4px grey;
+    margin-left: 12%;
+  }
+}
+
+             /* Management Menu Media Queries (mobile)*/
+
+@media(max-width: 500px){
+.listMenu {
+    height: 95vh;
+  } 
+}
+
+@media(max-width: 500px){
+  .mainMenu {
+    height: 100%;
+  }
+}
+
+@media(max-width: 500px){
+  .menuHeaderContent {
+    display: flex;
+  }
+}
+
+@media(max-width: 500px){
+  .menuHeaderBttn {
+    padding: 0.785714em 2.5em 0.785714em;
+  }
+}
+
+@media(max-width: 500px){
+ .welcomeDisplay {
+    margin-top: 16%;
+    margin-left: 19%;
+ } 
+}
+
+@media(max-width: 500px){
+  .mainMenuCardContainer, .listMenuCardContainer {
+    display: flex;
+    flex-direction: column;
+  } 
+ }
+
+ @media(max-width: 500px){
+  .menuCard {
+    width: 63%;
+    margin-left: 19%;
+  }
+}
+
+
+            /* Lists Media Queries*/
+
+@media(max-width: 500px) {
+  .createList, .viewProfile {
+    height: 100vh;    
+  }
+}
+
+@media(max-width: 500px){
+  .createListForm {
+    margin-left: 0;
+    padding: 14%;
+    padding-left: 28%;
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px){
+  .createListUnitPrice {
+    width: 44%;
+  }
+}
+
+@media(max-width: 500px){
+  .createListTotal {
+    margin-right: 5%;
+    margin-bottom: 4%;
+    width: 42%;
+  }
+}
+
+@media(max-width: 500px) {
+  .createListUnitPrice {
+    width: 44%;
+    margin-right: 6%;
+  }
+}
+
+@media(max-width: 500px){
+  .createListCat {
+    margin-left: -3%;
+    width: 47%;
+  }
+}
+
+@media(max-width: 500px){
+  .createListQuant {
+    width: 35%;
+    margin-left: 0%;
+    padding-bottom: 4%;
+  }
+}
+
+@media(max-width: 500px){
+  .createListBttn {
+    margin-top: 16%;
+    width: 46%;
+    padding-top: 4%;
+    margin-right: 32px;
+
+  }
+}
+
+@media(max-width: 500px){
+  .editForm {
+    margin-left: 0;
+    padding-left: 15%;
+  }
+}
+
+@media(max-width: 500px){
+  .editUnitP, .editTotal {
+    width: 21%;
+  }
+}
+
+@media(max-width: 500px){
+  .editCat {
+    width: 37%;
+  }
+}
+
+@media(max-width: 500px){
+  .editFields {
+    margin-bottom: 5%;
+  }
+}
+ 
+
+/* Menu Planning Que*/
+
+@media(max-width: 500px){
+  .menuPlanning {
+    height: 95vh;
+  }
+}
+
+@media(max-width: 500px){
+  .menuBackground {
+    padding-left: 11%;
+  }
+}
+
+@media(max-width: 500px){
+  .menuPlanningCardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 500px){
+  .createMenuInstructions, .editMenuInstructions {
+    font-size: 1.5rem;
+    margin-bottom: 8%;
+    padding-top: 10%;
+  }
+}
+
+@media(max-width: 500px){
+  .createMenuTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media(max-width: 500px){
+  .viewMenuContainer {
+    width: 107vw;
+    margin-top: 10%;
+    margin-bottom: 12%;
+  }
+}
+
+        /*Profile Media Queries*/
+
+@media(max-width: 500px){
+  .viewProfileContent {
+    padding-top: 45%;
+  }
+}
+
+@media(max-width: 500px){
+  .viewProfileInfo {
+    font-size: 1.5rem;
+    margin-left: 0;
+    padding-left: 15%;
+  }
+}
+
+@media(max-width: 500px){
+  .editProfileInstructions{
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 500px){
+  .editProfileInput {
+    width: 55%;
+    margin-left: 22%;
+  }
+}
+
+@media(max-width: 500px){
+  .bttnContainer {
+    margin-right: 7%;
+  }
+}
+
+@media(max-width: 500px){
+  .editProfileErrorMessage {
+    width: 55%;
+    margin-left: 20%;
+    padding-bottom: 3%;
+  }
+}
+
+
+
+
+
+
+
+
