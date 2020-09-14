@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import fire from '../../config/firebase';
 
+import createMenuImg from '../../images/createMenuOption.jpg';
+import viewMenu from '../../images/menuViewOption.jpg';
+
 class MenuPlanningMenu extends React.Component {
 
 logout = () => {
@@ -17,19 +20,19 @@ logout = () => {
         </div>
        <div className='menuPlanning'>
           <div className='ui two cards menuPlanningCardContainer' style={{padding: '14% 11%', margin:'0' }}>
-        <Link to ='/create-menu ' className='card ui container'>
+        <button onClick={() => this.props.history.push('/create-menu')} className='card ui container' style={{cursor:'pointer'}}>
           <div className="image">
             <img
-              src="https://images.unsplash.com/photo-1561222856-eb920e4960d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              src={createMenuImg}
               alt="notebook and pen"
             />
             <h2>Create Menu</h2>
           </div>
-        </Link>
+        </button>
         <Link to='/view-menu' className='card ui container'>
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1536236397240-9b229a37a286?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                src={viewMenu}
                 alt="clipboards"
               />
               <h2> View Menu</h2>

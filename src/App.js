@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 
 import Home from './components/Home&Auth/Home';
 import SignUp from './components/Home&Auth/SignUp';
@@ -29,7 +29,6 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Router>
           <div>
             <Switch>
               <Route path='/edit-profile' component={EditName} />
@@ -54,7 +53,6 @@ class App extends React.Component {
               <Route exact path='/' component={Home}/>
             </Switch>
           </div>
-        </Router>       
       </div>
     );
   }
