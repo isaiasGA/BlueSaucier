@@ -135,7 +135,7 @@ class EditProfile extends React.Component {
                 <label style={{color: 'white'}}>New Email:</label>
                 <input value={this.state.newEmail} onChange={this.handleChanges} type='email' name='newEmail' placeholder='New Email' autoComplete='off'/>
               </div>
-              <div className='bttn container'>
+              <div className='bttnContainer'>
                <button className='ui black button' style={{marginRight: '16%'}}>Submit</button>
               </div>
             </form>

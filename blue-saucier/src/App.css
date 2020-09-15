@@ -8,11 +8,21 @@ h2 {
 button {
   font-family: 'Raleway', sans-serif;
 }
+
+.listMenu, .menuPlanning {
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
                               /*Sign up*/
 
 .signUp {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/signUp.jpg) no-repeat center center fixed;
-    height: 990px;
+    height: 100vh;
     background-size: cover;
     padding-left: 29%;
     padding-top: 13%;
@@ -60,6 +70,14 @@ button {
     margin-left: 7%;
     color: white;
     font-size: 2.5rem;
+}
+
+.logAuthInfo {
+  color: white;
+  text-align: center;
+  margin-right: 64%;
+  background: #1C1C1C;
+  border-radius: 9px;
 }
 
 .loginForm {
@@ -173,7 +191,7 @@ button {
 .contact{
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/contact.jpg)  no-repeat center center fixed;
   background-size: cover;
-  height: 899px;
+  height: 100vh;
 }
 
 .contactContent {
@@ -186,7 +204,7 @@ button {
 .home {
   background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
   filter: grayscale(100%);
-  height: 899px;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -270,13 +288,17 @@ button {
 
 .listMenu {
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
-  height: 899px;
-  background-size: cover;
+}
+
+.listMenuCardContainer, .menuPlanningCardContainer {
+  width: 39%;
+  margin-left: 29%;
+  padding-top: 18%;
 }
 
 .createList {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg);
-  height: 899px;
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/createList.jpg) no-repeat center center fixed;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -371,8 +393,6 @@ button {
 
 .menuPlanning {
   background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0) ), url(./images/menu.jpg) no-repeat center center fixed;
-  height: 899px;
-  background-size: cover;
 }
 
 
@@ -518,7 +538,7 @@ button {
   padding-bottom: 12%;
 }
 
-/*  Profile*/
+                                      /*  Profile*/
 
 .profileContainer {
 
@@ -542,7 +562,7 @@ button {
 
 .viewProfile{
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/manageProfile.jpg)  no-repeat center center fixed;
-  height: 899px;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -552,7 +572,7 @@ background-color: #848484;
 
 .editProfile{
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) ), url(./images/profileEdit.jpg)  no-repeat center center fixed;
-  height: 899px;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -570,17 +590,19 @@ background-color: #848484;
 .editProfileInput {
   width: 20%;
   margin-bottom: 3%; 
-  margin-left: 32%;
+  margin-left: 38%;
+}
+
+.bttnContainer {
+  margin-left: 10%;
 }
 
 
-
-                    /*Sign Up Media Queries (mobile)*/
+                             /*Sign Up Media Queries (mobile)*/
 
 @media(max-width: 500px){
   .signUp {
     padding-left: 0;
-    height: 100vh;
     }
 }
 
@@ -595,12 +617,10 @@ background-color: #848484;
 
 @media(max-width: 500px){
   .signupFormContent{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 0;
-    text-align: center;
   }
 }
 
@@ -630,6 +650,13 @@ background-color: #848484;
 @media(max-width: 500px){
   .login {
     padding-left: 26%;
+  }
+}
+
+@media(max-width: 500px){
+  .logAuthInfo {
+  width: 70%;
+  margin: 0;
   }
 }
 
@@ -678,7 +705,13 @@ background-color: #848484;
   }
 }
 
-/* Home Media Queries (mobile)*/
+                                        /* Home Media Queries (mobile)*/
+
+@media(max-width: 500px){
+  .home {
+    height: 115vh;
+  }
+}
 
 @media(max-width: 500px){
   .homeContent {
@@ -708,11 +741,6 @@ background-color: #848484;
 
              /* Management Menu Media Queries (mobile)*/
 
-@media(max-width: 500px){
-.listMenu {
-    height: 95vh;
-  } 
-}
 
 @media(max-width: 500px){
   .mainMenu {
@@ -756,12 +784,6 @@ background-color: #848484;
 
             /* Lists Media Queries*/
 
-@media(max-width: 500px) {
-  .createList, .viewProfile {
-    height: 100vh;    
-  }
-}
-
 @media(max-width: 500px){
   .createListForm {
     margin-left: 0;
@@ -770,6 +792,13 @@ background-color: #848484;
     width: 100%;
   }
 }
+
+@media(max-width: 500px){
+  .listMenu, .menuPlanning, .login {
+    height: 110vh;
+  }
+}
+
 
 @media(max-width: 500px){
   .createListUnitPrice {
@@ -844,12 +873,6 @@ background-color: #848484;
  
 
 /* Menu Planning Que*/
-
-@media(max-width: 500px){
-  .menuPlanning {
-    height: 95vh;
-  }
-}
 
 @media(max-width: 500px){
   .menuBackground {

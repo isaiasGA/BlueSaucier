@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Footer from './Footer';
 
 const Home = () => {
+  
   window.scrollTo(0, 0)
 
   const history = useHistory();

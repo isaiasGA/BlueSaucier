@@ -23,10 +23,6 @@ const initialState = {
 class SignUpForm  extends React.Component {
   state = initialState;
 
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
-
   validateInputs = () => {
 
     let firstNameError = '';

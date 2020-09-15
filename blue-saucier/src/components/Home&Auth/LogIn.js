@@ -4,6 +4,10 @@ import LogInForm from './AuthForms/LogInForm';
 import Footer from './Footer'
 
 class SignIn extends React.Component {
+  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   render() {
     return(

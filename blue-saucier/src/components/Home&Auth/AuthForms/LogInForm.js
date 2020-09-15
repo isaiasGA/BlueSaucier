@@ -10,10 +10,6 @@ class LogInForm extends React.Component {
     display: 'none'
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
-
   firebaseSignInUser = () => {
     Firebase
     .auth()
@@ -46,6 +42,10 @@ class LogInForm extends React.Component {
       <div className='login ui contaniner'>
         <form onSubmit={this.handleSubmit} className=" loginForm ui form error">
           <div>
+          <div className='logAuthInfo'>
+            <h2>Email: &nbsp; demo@gmail.com</h2>
+            <h2>Password: &nbsp; demo12345 </h2>
+            </div>
             <h3 className='loginTitle'>Log In</h3>
             <div className="ui error message loginErrorMessage" style={{ display:`${this.state.display}`}}>
               <div className='loginErrorCodeMessage'>{this.state.errorCode }</div>

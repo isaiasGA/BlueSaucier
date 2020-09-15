@@ -45,7 +45,7 @@ class ViewMenu extends React.Component {
             <div className='menuBackground2'>
               <h3 className='viewMenuTitle'>Menu</h3>
               <h3 className='viewMenuCategory'> {menuObject.category} </h3>
-                <h4 className='viewMenuDish'> {menuObject.dish}................................{menuObject.price} </h4>
+              <h4 className='viewMenuDish'> {menuObject.dish}................................{menuObject.price} </h4>
               <p className='viewMenuDescription'> {menuObject.description} </p>
 
                 {menuObject.dishValues.map((dish, i) => {

@@ -6,6 +6,10 @@ import Footer from './Footer';
 
 class SignUp extends React.Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return(
       <>
