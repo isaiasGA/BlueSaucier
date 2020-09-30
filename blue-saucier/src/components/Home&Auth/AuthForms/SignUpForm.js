@@ -3,7 +3,6 @@ import * as Firebase from 'firebase/app';
 
 import SuccessModal from '../SuccessModal';
 
-
 const initialState = {
   firstName: '',
   lastName: '',
@@ -18,7 +17,6 @@ const initialState = {
 
   modalOpen: false
 }
-
 
 class SignUpForm  extends React.Component {
   state = initialState;
@@ -46,14 +44,12 @@ class SignUpForm  extends React.Component {
       firstNameError = 'Please provide a password'
     }
 
-
     if(firstNameError || lastNameError || emailError || passwordError){
       this.setState({ firstNameError, lastNameError, emailError, passwordError });
       return false;
     }
-
       return true;
-   }
+    }
 
   firebaseCreateUser = () => {
     Firebase
