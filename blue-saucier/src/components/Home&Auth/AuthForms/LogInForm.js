@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Firebase from 'firebase/app';
 
-
 class LogInForm extends React.Component {
   state = {
     email: '',

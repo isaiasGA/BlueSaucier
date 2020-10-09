@@ -9,15 +9,7 @@ button {
   font-family: 'Raleway', sans-serif;
 }
 
-.listMenu, .menuPlanning {
-  background-size: cover;
-  min-height: 100%;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+
                               /*Sign up*/
 
 .signUp {
@@ -60,7 +52,7 @@ button {
                              /*Log In*/
 
 .login {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/logIn2.jpg) no-repeat 50% fixed;
   height: 100vh;
   background-size: cover;
   padding-left: 34%;
@@ -202,7 +194,7 @@ button {
                                 /*Home*/
 
 .home {
-  background: url(./images/kitchenHome.jpg) no-repeat center center fixed;
+  background: url(./images/kitchenHome.jpg) no-repeat no-repeat 50% fixed;;
   filter: grayscale(100%);
   height: 100vh;
   background-size: cover;
@@ -287,7 +279,9 @@ button {
                           /*Lists*/
 
 .listMenu {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5) ), url(./images/listMenu.jpg) no-repeat 50% fixed;
+  height: 100vh;
+  background-size: cover;
 }
 
 .listMenuCardContainer, .menuPlanningCardContainer {
@@ -392,7 +386,9 @@ button {
                                         /*Menu Planning*/
 
 .menuPlanning {
-  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0) ), url(./images/menu.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.6) ), url(./images/menu.jpg) no-repeat 50% fixed;
+  height: 100vh;
+  background-size: cover;
 }
 
 

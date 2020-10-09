@@ -121,7 +121,6 @@ class EditMenu extends React.Component {
   }
 
   render(){
-    console.log(this.state.menuId)
     return(
       <div className='editMenu'>
         <div className='ui inverted menu' style={{margin: '0', borderRadius: '0'}}>
